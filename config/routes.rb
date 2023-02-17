@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'background/index'
 
   get 'blogs/index'
   get 'blogs/why2023'

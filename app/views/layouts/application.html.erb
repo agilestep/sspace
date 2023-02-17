@@ -49,8 +49,18 @@
             <%= link_to "Home", home_index_path , class: 'nav-link py-2 px-0 px-lg-2' %>
           </li>
           <li>
+            <%= link_to "Blogs", blogs_index_path , class: 'nav-link py-2 px-0 px-lg-2' %>
+          </li>
+
+          <li>
+            <%= link_to "My Background", background_index_path , class: 'nav-link py-2 px-0 px-lg-2' %>
+          </li>
+
+          <li>
             <a href = "mailto: <%= my_email %>">Send Me an Email</a>
           </li>
+
+
         </ul>
       </div>
       <span> Copyright © <%= my_email %> </span>
