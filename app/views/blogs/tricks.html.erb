@@ -1,63 +1,64 @@
 <%= render 'style_blogs' %>
 <%= render 'side_menu' %>
 
-<main class="content blog">
-  <p>
-    Ruby is a versatile and powerful programming language that offers many features and tools to help developers write clean, efficient code. In this article, we'll explore some advanced Ruby code tricks that can help you write more concise and elegant code.
-  </p>
+<main class="blog">
+  <div class="content">
+    <p>
+      Ruby is a versatile and powerful programming language that offers many features and tools to help developers write clean, efficient code. In this article, we'll explore some advanced Ruby code tricks that can help you write more concise and elegant code.
+    </p>
 
-  <h2>Using the &amp; operator for method calls</h2>
+    <h2>Using the &amp; operator for method calls</h2>
 
-  <p>
-    The &amp; operator is a powerful tool that allows you to convert a method into a block. This can be particularly useful when working with collections or enumerables in Ruby.
-    For example, let's say you have an array of numbers and you want to filter out the even numbers:
-  </p>
+    <p>
+      The &amp; operator is a powerful tool that allows you to convert a method into a block. This can be particularly useful when working with collections or enumerables in Ruby.
+      For example, let's say you have an array of numbers and you want to filter out the even numbers:
+    </p>
 
-  <pre>
+    <pre>
     <code class="language-ruby">
       numbers = [1, 2, 3, 4, 5, 6]
       evens = numbers.select { |n| n.even? }
     </code>
   </pre>
 
-  <p>
-    This works fine, but we can make it more concise by using the & operator to convert the even? method into a block:
-  </p>
+    <p>
+      This works fine, but we can make it more concise by using the & operator to convert the even? method into a block:
+    </p>
 
-  <pre>
+    <pre>
     <code class="language-ruby">
          numbers = [1, 2, 3, 4, 5, 6]
          evens = numbers.select(&:even?)
     </code>
   </pre>
-  <p>
-    This code is equivalent to the previous example, but it's shorter and easier to read.
-  </p>
-  <h2>
-    Using the ||= operator for default values
-  </h2>
-  <p>
-    The ||= operator is a shorthand way of assigning a default value to a variable if it's not already defined. For example, let's say you have a variable that you want to assign a default value of 0 to:
-  </p>
-  <pre>
+    <p>
+      This code is equivalent to the previous example, but it's shorter and easier to read.
+    </p>
+    <h2>
+      Using the ||= operator for default values
+    </h2>
+    <p>
+      The ||= operator is a shorthand way of assigning a default value to a variable if it's not already defined. For example, let's say you have a variable that you want to assign a default value of 0 to:
+    </p>
+    <pre>
     <code class="language-ruby">
          count = 0 unless count
     </code>
   </pre>
-  <p>
-    This works, but we can make it more concise using the ||= operator:
-  </p>
-  <pre>
+    <p>
+      This works, but we can make it more concise using the ||= operator:
+    </p>
+    <pre>
     <code class="language-ruby">
          count ||= 0
     </code>
   </pre>
-  <p>This code is equivalent to the previous example, but it's shorter and more elegant.</p>
+    <p>This code is equivalent to the previous example, but it's shorter and more elegant.</p>
 
-  <h2>Using the splat operator to capture arguments</h2>
-  <p>The splat operator (*) is a powerful tool that allows you to capture multiple arguments in a method. This can be particularly useful when working with variable-length argument lists. For example, let's say you have a method that takes a variable number of arguments and you want to print each argument:</p>
+    <h2>Using the splat operator to capture arguments</h2>
+    <p>The splat operator (*) is a powerful tool that allows you to capture multiple arguments in a method. This can be particularly useful when working with variable-length argument lists. For example, let's say you have a method that takes a variable number of arguments and you want to print each argument:</p>
 
-  <pre>
+    <pre>
     <code class="language-ruby">
        def print_args(*args)
          args.each { |arg| puts arg }
@@ -65,10 +66,10 @@
     </code>
   </pre>
 
-  <p>This works fine, but we can make it more concise by using the splat operator to capture the arguments: </p>
+    <p>This works fine, but we can make it more concise by using the splat operator to capture the arguments: </p>
 
 
-  <pre>
+    <pre>
     <code class="language-ruby">
          def print_args(*args)
            puts args
@@ -76,18 +77,18 @@
      </code>
   </pre>
 
-  <p>This code is equivalent to the previous example, but it's shorter and easier to read.</p>
+    <p>This code is equivalent to the previous example, but it's shorter and easier to read.</p>
 
-  <h2>
-    Using the ternary operator for conditional assignments
-  </h2>
+    <h2>
+      Using the ternary operator for conditional assignments
+    </h2>
 
-  <p>
-    The ternary operator is a shorthand way of writing an if/else statement in a single line. This can be particularly useful for conditional assignments. For example, let's say you have a variable that you want to assign a value to based on a condition:
-  </p>
+    <p>
+      The ternary operator is a shorthand way of writing an if/else statement in a single line. This can be particularly useful for conditional assignments. For example, let's say you have a variable that you want to assign a value to based on a condition:
+    </p>
 
 
-  <pre>
+    <pre>
     <code class="language-ruby">
        if x > 10
          y = "greater t  han 10"
@@ -97,24 +98,24 @@
     </code>
   </pre>
 
-  <p> This works fine, but we can make it more concise using the ternary operator:</p>
+    <p> This works fine, but we can make it more concise using the ternary operator:</p>
 
-  <pre>
+    <pre>
     <code class="language-ruby">
          y = x > 10 ? "greater than 10" : "less than or equal to 10"
     </code>
   </pre>
-  <p>
-    This code is equivalent to the previous example, but it's shorter and more elegant.
-  </p>
-  <h2>
-    Using the splat operator for array concatenation
-  </h2>
-  <p>
-    The splat operator (*) can also be used to concatenate arrays. For example, let's say you have two arrays and you want to concatenate them:
-  </p>
+    <p>
+      This code is equivalent to the previous example, but it's shorter and more elegant.
+    </p>
+    <h2>
+      Using the splat operator for array concatenation
+    </h2>
+    <p>
+      The splat operator (*) can also be used to concatenate arrays. For example, let's say you have two arrays and you want to concatenate them:
+    </p>
 
-  <pre>
+    <pre>
     <code class="language-ruby">
          array1 = [1, 2, 3]
          array2 = [4, 5, 6]
@@ -122,14 +123,15 @@
     </code>
   </pre>
 
-  <p>
-    This works fine, but we can make it more concise using the splat operator:
-  </p>
+    <p>
+      This works fine, but we can make it more concise using the splat operator:
+    </p>
 
-  <pre>
+    <pre>
     <code class="language-ruby">
          varray1 = [1, 2, 3]
          array2 = [4, 5,]
     </code>
   </pre>
+  </div>
 </main>
