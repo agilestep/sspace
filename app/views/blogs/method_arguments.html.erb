@@ -1,0 +1,98 @@
+<%= render 'style_blogs' %>
+
+<%= render 'side_menu' %>
+
+<main class="content blog">
+<p>In Ruby, function arguments are a powerful feature that allow you to pass data into a method and use it in your code.
+  In this article, we'll explore how to use function arguments in Ruby and show you some examples of how they can be used in practice.
+</p>
+
+<h2>Defining Function Arguments in Ruby</h2>
+
+<p>
+  To define function arguments in Ruby, you simply list them inside the parentheses after the method name. Here's an example of a method that takes two arguments:
+</p>
+
+<pre><code class="language-ruby">
+
+  def greeting(name, age)
+  puts "Hello, #{name}! You are #{age} years old."
+  end
+</code></pre>
+
+  <p>In this example, we define a method called greeting that takes two arguments: name and age.</p>
+
+  <h2>
+    Using Function Arguments in Ruby
+  </h2>
+
+  <p>
+    Once you've defined function arguments in Ruby, you can use them inside your method just like any other variable. Here's an example of a method that uses its arguments to calculate the sum of two numbers:
+  </p>
+
+  <pre><code class="language-ruby">
+
+
+  def sum(a, b)
+  return a + b
+end
+
+result = sum(5, 10)
+puts result # Output: 15
+  </code></pre>
+
+  <p>
+    In this example, we define a method called sum that takes two arguments, a and b. Inside the method, we use these arguments to calculate the sum of the two numbers and return the result.
+  </p>
+  <h2>
+    Default Values for Function Arguments
+  </h2>
+  <p>
+    In Ruby, you can specify default values for function arguments. If an argument is not passed to the method, the default value will be used instead. Here's an example of a method that takes an optional argument with a default value:
+  </p>
+
+
+<pre><code class="language-ruby">
+def greeting(name, age = 30)
+puts "Hello, #{name}! You are #{age} years old."
+end
+
+greeting("Alice") # Output: "Hello, Alice! You are 30 years old."
+greeting("Bob", 25) # Output: "Hello, Bob! You are 25 years old."
+</code>
+</pre>
+
+<p>
+  In this example, we define a method called greeting that takes two arguments: name and age. We set the default value of age to 30. If age is not passed as an argument, the default value will be used.
+</p>
+
+<h2>Using Named Arguments in Ruby </h2>
+<p>
+In Ruby 2.0 and later versions, you can use named arguments to make your code more readable and maintainable. Named arguments allow you to specify arguments by name instead of position. Here's an example of a method that uses named arguments:
+</p>
+
+
+<pre><code class="language-ruby">
+  def greeting(name:, age: 30)
+puts "Hello, #{name}! You are #{age} years old."
+end
+
+greeting(name: "Alice") # Output: "Hello, Alice! You are 30 years old."
+greeting(name: "Bob", age: 25) # Output: "Hello, Bob! You are 25 years old."
+</code>
+</pre>
+
+<p>
+  In this example, we define a method called greeting that takes two named arguments: name and age. We set the default value of age to 30. If age is not passed as an argument, the default value will be used.
+</p>
+
+<h2>
+  Conclusion
+</h2>
+
+<p>
+  In this article, we've explored how to use function arguments in Ruby. We've seen how to define arguments, use them in your code, specify default values, and use named arguments to make your code more readable and maintainable. By understanding how to use function arguments, you can write more powerful and flexible code in Ruby.
+
+
+</p>
+</main>

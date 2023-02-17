@@ -1,0 +1,88 @@
+<%= render 'style_blogs' %>
+<%= render 'side_menu' %>
+
+
+<main class="blog">
+
+  <div class="content">
+
+    <h1> Regex usage in Ruby</h1>
+    <p>
+      Regular expressions, or regex for short, are a powerful tool used for pattern matching and
+      text processing. Ruby has a built-in regular expression engine that provides a simple and
+      efficient way to work with regex. In this article, we'll explore how to use regex in Ruby,
+      including how to create regex patterns, how to use regex in Ruby code, and how to apply regex to strings.
+    </p>
+
+    <h2>Creating Regular Expressions in Ruby</h2>
+    <p>
+      A regular expression is a pattern that specifies a set of matching strings. In Ruby, a regex is represented by a special syntax that is enclosed in forward slashes (/). For example, to create a regex pattern that matches any string that contains the word "ruby", we can use the following code:
+    </p>
+    <pre>
+      <code class="language-ruby">
+         /ruby/
+      </code>
+    </pre>
+    <p>
+      This regex will match any string that contains the characters "ruby" in that order. We can also use regex metacharacters to specify more complex patterns. For example, to match any string that starts with "ruby" and ends with a digit, we can use the following pattern:
+    </p>
+
+    <pre>
+      <code class="language-ruby">
+         /^ruby\d$/
+</code>
+    </pre>
+
+
+    <p>
+      This regex uses the ^ and $ metacharacters to match the start and end of the string, respectively. The \d metacharacter matches any digit.
+    </p>
+
+    <h2>
+      Using Regular Expressions in Ruby Code
+    </h2>
+
+    <p>Once we have created a regex pattern, we can use it in our Ruby code to perform pattern matching and text processing. The most common method for using regex in Ruby is the <code>match</code> method, which is available on string objects. The <code>match</code> method returns a <code>MatchData</code> object that contains information about the matched string. Here's an example:</p>
+
+    <pre>
+      <code class="language-ruby">
+         string = "ruby123"
+         regex = /^ruby\d$/
+         match_data = string.match(regex)
+         puts match_data[0]
+</code>
+    </pre>
+
+    <p>In this code, we create a string <code>string</code> and a regex pattern <code>regex</code>. We then call the <code>match</code> method on the string with the regex pattern as an argument. The <code>match</code> method returns a <code>MatchData</code> object that contains information about the matched string. We can access the matched string using the square bracket notation on the <code>MatchData</code> object. In this example, we simply print the matched string to the console.</p>
+
+    <h2>Applying Regular Expressions to Strings</h2>
+
+    <p>In addition to the <code>match</code> method, Ruby provides a number of other methods for applying regex to strings. Here are some of the most commonly used methods:</p>
+
+    <p>In addition to the <code>match</code> method, Ruby provides a number of other methods for applying regex to strings. Here are some of the most commonly used methods:</p>
+
+    <ul><li><code>=~</code> - This method returns the index of the first character in the string that matches the regex pattern, or <code>nil</code> if there is no match.</li><li><code>sub</code> - This method replaces the first occurrence of the regex pattern in the string with a replacement string.</li><li><code>gsub</code> - This method replaces all occurrences of the regex pattern in the string with a replacement string.</li></ul>
+
+    <p>Here's an example that demonstrates how to use the <code>sub</code> method to replace a word in a string:</p>
+
+    <pre>
+      <code class="language-ruby">
+         string = "The quick brown fox jumps over the lazy dog."
+         regex = /brown/
+         new_string = string.sub(regex, "red")
+         puts new_string
+      </code>
+    </pre>
+
+    <p>
+      In this code, we create a string string, a regex pattern regex, and a replacement string "red". We then call the sub method on the string with the regex pattern and replacement string as arguments. The sub method replaces the first occurrence of the word "brown" in the string with the word "red". We then print the new string to the console.
+    </p>
+    <h2>
+      Conclusion
+    </h2>
+
+    <p>
+      Regex is a powerful tool for pattern matching and text processing, and Ruby provides a simple and efficient way to work with regex patterns. By using the match, =~, sub, and gsub
+    </p>
+  </div>
+</main>
