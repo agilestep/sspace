@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'experience/index'
+  get 'experience/show'
   get 'background/index'
 
   get 'blogs/index'
