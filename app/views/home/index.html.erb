@@ -40,7 +40,7 @@
     margin-top: 100px;
   }
 
-   strong{
+  strong{
     color: #fffdfd;
     opacity: 1;
     font-weight: bolder;
@@ -50,18 +50,18 @@
     visibility: hidden;
   }
 
-    .red{
-      color: #ff4d4f;
-    }
-    body{
-      background-color: black;
-    }
-    a{
-      align-content: center;
-      color: white;
-      font-size: 1em;
-      margin-left: 10px;
-    }
+  .red{
+    color: #ff4d4f;
+  }
+  body{
+    background-color: black;
+  }
+  a{
+    align-content: center;
+    color: white;
+    font-size: 1em;
+    margin-left: 10px;
+  }
 </style>
 
 <script type="text/javascript">
@@ -102,33 +102,32 @@
     <div id="info-content" style="">
       <!--initially blank space and filled step by step-->
     </div>
-
-    <div id="info-block-hidden" style="visibility: hidden">
-      <h2> Hello! My name is <strong> Serghei </strong> and I am <strong> FULL STACK </strong> <span class="red"> Ruby on Rails</span> developer with over 10 years of experience!  </h2>
-      <p>
-        If you are trying to build a GREAT site or software for your Business,or if you experience ANY issue with the existing one, I will be happy to assist you with this because my profession is to HELP people and I have necessary SKILLS to do this.
-        I am not a <i class="fa-solid fa-user-ninja"></i> Ninja Developer, I am more like Samurai Developer <i class="fa-regular fa-torii-gate"></i> because my goal is: exceptional quality,aim of excellence and happy and protected client.
-      </p>
-
-      <p>
-        <strong> Languages:</strong> Ruby,SQL,JavaScript,HTML5, CSS3,TypeScript,ERB,C#
-      </p>
-
-      <p>
-        <strong>Data:</strong> Postgresql,Redis,Elasticsearch,Oracle,OracleSpatial,SqlServer,MongoDB
-      </p>
-      <p>
-        <strong> Skills:</strong> OOP, OOD, Agile Development,Adaptive web design, STRONG SEO Optimization, Nginx, Unicorn, Ruby on Rails, RSpec, ActiveAdmin, ActionMailer, ActiveRecord, Sidekiq, Ruby Gems, Payment Processing(Stripe, Paypal), SSL, APIs integration(facebook,google,amazon), Git, GitHub, Bitbucket, AJAX, JQuery, AngularJS, AngularJS 2, Fabric.js, Twitter Bootstrap, Datashift Spree, Klaviyo, prerender.io, ASP.NET MVC, LINQ, EF, WPF, ADO.NET, Unit Testing, Nunit, SVN, Microstation.
-      </p>
-
-      <p>
-        * I started with Ruby 1.8.7 and Ruby on Rails 2.0.2 so don't hesitate contacting me if you have an old application or you are try to migrate to new Ruby on Rails.(I have such experience also).
-      </p>
-
-      <%= link_to "Get More Details", experience_index_path , class: '' %> </br>
-
-      <a href = "mailto: <%= my_email %>">Send Me an Email</a>
-
-    </div>
   </div>
+
+  <div id="info-block-hidden" style="visibility: hidden">
+    <h2> Hello! My name is <strong> Serghei </strong> and I am <strong> FULL STACK </strong> <span class="red"> Ruby on Rails</span> developer with over <strong>10 years</strong> of experience!  </h2>
+    <p>
+      If you are trying to build a <strong> GREAT</strong> site or software for your Business,or if you experience ANY issue with the existing one, I will be happy to assist you, because my profession is to HELP people and I have necessary SKILLS to do this.
+      I am not a <i class="fa-solid fa-user-ninja"></i> Ninja Developer, I am more like Samurai Developer <i class="fa-regular fa-torii-gate"></i> because my goals are: exceptional quality happy and protected client.
+    </p>
+
+    <p>
+      <strong> Languages:</strong> Ruby,SQL,JavaScript,HTML5, CSS3,TypeScript,ERB,C#
+    </p>
+
+    <p>
+      <strong>Data:</strong> Postgresql,Redis,Elasticsearch,Oracle,OracleSpatial,SqlServer,MongoDB
+    </p>
+    <p>
+      <strong> Skills:</strong> OOP, OOD, Agile Development,Adaptive web design, STRONG SEO Optimization, Nginx, Unicorn, Ruby on Rails, RSpec, ActiveAdmin, ActionMailer, ActiveRecord, Sidekiq, Ruby Gems, Payment Processing(Stripe, Paypal), SSL, APIs integration(facebook,google,amazon), Git, GitHub, Bitbucket, AJAX, JQuery, AngularJS, AngularJS 2, Fabric.js, Twitter Bootstrap, Datashift Spree, Klaviyo, prerender.io, ASP.NET MVC, LINQ, EF, WPF, ADO.NET, Unit Testing, Nunit, SVN, Microstation.
+    </p>
+
+    <p>
+      * I started with Ruby 1.8.7 and Ruby on Rails 2.0.2 so don't hesitate contacting me if you have an old application or you are try to migrate to new Ruby on Rails.(I have such experience also).
+    </p>
+
+    <%= link_to "Get More Details", experience_index_path , class: '' %> OR <a href = "mailto: <%= my_email %>">Send Me an Email</a>
+
+  </div>
+</div>
 </div>
