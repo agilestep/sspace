@@ -56,6 +56,12 @@
     body{
       background-color: black;
     }
+    a{
+      align-content: center;
+      color: white;
+      font-size: 1em;
+      margin-left: 20px;
+    }
 </style>
 
 <script type="text/javascript">
@@ -98,11 +104,10 @@
     </div>
 
     <div id="info-block-hidden" style="visibility: hidden">
-      <h2> Hello there! My name is <strong> Serghei </strong> and I am <strong> Full Stack </strong> <span class="red"> Ruby on Rails</span> developer! </h2>
+      <h2> Hello! My name is <strong> Serghei </strong> and I am <strong> FULL STACK </strong> <span class="red"> Ruby on Rails</span> developer with over 10 years of experience!  </h2>
       <p>
-        I am ambitious and hard-working FULL STACK Developer with <strong>12 YEARS </strong> of experience.
-        If you are trying to build a GREAT site or software, if you experience ANY issue with the existing one, I will be happy to assist you with this because my profession is to HELP people and I have necessary SKILLS to do this.
-        I am not a <i class="fa-solid fa-user-ninja"></i> Ninja Developer, I am more like Samurai Developer <i class="fa-regular fa-torii-gate"></i> because my goal is: perfection, exceptional quality, happy and protected client.
+        If you are trying to build a GREAT site or software for your Business,or if you experience ANY issue with the existing one, I will be happy to assist you with this because my profession is to HELP people and I have necessary SKILLS to do this.
+        I am not a <i class="fa-solid fa-user-ninja"></i> Ninja Developer, I am more like Samurai Developer <i class="fa-regular fa-torii-gate"></i> because my goal is: exceptional quality,aim of excellence and happy and protected client.
       </p>
 
       <p>
@@ -119,7 +124,11 @@
       <p>
         * I started with Ruby 1.8.7 and Ruby on Rails 2.0.2 so don't hesitate contacting me if you have an old application or you are try to migrate to new Ruby on Rails.(I have such experience also).
       </p>
+
+      <%= link_to "Get More Details", experience_index_path , class: '' %> </br>
+
       <a href = "mailto: <%= my_email %>">Send Me an Email</a>
+
     </div>
   </div>
 </div>
