@@ -1,7 +1,5 @@
 
 <style>
-
-
   h1 {
     margin-bottom: 30px;
     align-content: center;
@@ -10,7 +8,6 @@
   }
 
   h2{font-size: 1.8em; margin-left: 20%; margin-top: 40px; margin-bottom: 40px;}
-
 
   span{
     font-weight: bolder;
@@ -66,12 +63,17 @@
 
     <div>
       <h2>
-        Pipeline Management System
+        Pipeline Management System at GlobeZenit
       </h2>
       <p>
         I was Team leader for 4 projects based on Pipeguardian Core for gas companies from France, Belgium and Netherlands.
-        Those are big projects with comprehensive pipelines management abilities. I took entire responsibility for all aspects of the projects, I did team training, designed application architecture and even visit France, Belgium and Holland to speak face-to-face with our customers.
-        Our client have been even such large companies as Sabic
+        Those are big projects with comprehensive pipelines management abilities.
+        I took entire responsibility for all aspects of the projects, I did team training, designed application architecture and even
+        visit France, Belgium and Holland to speak face-to-face with our customers.
+        Our client have been even such large companies as <a href="https://en.wikipedia.org/wiki/SABIC"> Sabic </a>
+      </p>
+      <p>
+        Technologies: .Net,Ruby on Rails,Oracle, Oracle Spatial, Microstation v8i
       </p>
 
       <p>
@@ -84,8 +86,14 @@
       </p>
 
       <div>
-        <%= image_tag("/images/pipeline_home.png",height: '300', width: '300') %>
-        <%= image_tag("/images/pipeline_map.png",height: '300', width: '300') %>
+
+        <%= link_to("/images/pipeline_home.png", target: "_blank") do %>
+          <%= image_tag("/images/pipeline_home.png",height: '300', width: '300') %>
+        <% end %>
+
+        <%= link_to("/images/pipeline_map.png", target: "_blank") do %>
+          <%= image_tag("/images/pipeline_map.png",height: '300', width: '400') %>
+        <% end %>
       </div>
     </div>
 
@@ -105,13 +113,25 @@
       </p>
       <p>
       <span>
-      Dates - September 2015 - April 2017
+       Dates - September 2015 - April 2017
+       Technologies: Ruby on Rails,HTML5, Angular 1, HTML Canvas, Postgresql, DigitalOcean(Ubuntu + Unicorn + Nginx)
     </span>
       </p>
       <div>
-        <%= image_tag("/images/ShirtMagicHome.png",height: '300', width: '300') %>
+        <%= link_to("/images/ShirtMagicHome.png", target: "_blank") do %>
+
+          <%= image_tag("/images/ShirtMagicHome.png",height: '300', width: '300') %>
+          <% end %>
+        <%= link_to("/images/ShirtMagicdesigner.png", target: "_blank") do %>
+
         <%= image_tag("/images/ShirtMagicdesigner.png",height: '300', width: '300') %>
-        <%= image_tag("/images/ShirtMagicProduct.png",height: '300', width: '300') %>
+
+          <% end %>
+
+
+        <%= link_to("/images/ShirtMagicdesigner.png", target: "_blank") do %>
+        <%= image_tag("/images/ShirtMagicdesigner.png",height: '300', width: '300') %>
+          <% end %>
       </div>
     </div>
 
@@ -129,7 +149,9 @@
         Dates - ???
       </p>
     </span>
-      <%= image_tag("/images/vpn.png",height: '300', width: '300') %>
+      <%= link_to("/images/ShirtMagicdesigner.png", target: "_blank") do %>
+        <%= image_tag("/images/vpn.png",height: '300', width: '300') %>
+      <% end %>
     </div>
 
     <div>
@@ -148,9 +170,13 @@
     </span>
       </p>
 
-      <%= image_tag("/images/ShowMojo_home.png",height: '300', width: '400') %>
-      <span> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span>
+      <%= link_to("/images/ShowMojo_home.png", target: "_blank") do %>
+        <%= image_tag("/images/ShowMojo_home.png",height: '300', width: '400') %>
+      <% end %>
+
+      <%= link_to("/images/ShowMojo_Map.png", target: "_blank") do %>
       <%= image_tag("/images/ShowMojo_Map.png",height: '300', width: '300') %>
+        <% end %>
     </div>
 
 
@@ -176,7 +202,7 @@
         Online book store.
       </h2>
       <p>
-        Project description
+        Project description:
         I participated to interesting spree based project.
         It was an an online book store.
         My role was to work on bugs , implement new tools , and creating a feed service to automate data import from different sources.
@@ -187,10 +213,44 @@
     </span>
       </p>
       <div>
-        <%= image_tag("/images/store_home.png",height: '300', width: '300') %>
-        <%= image_tag("/images/store_grid.png",height: '300', width: '300') %>
+
+        <%= link_to("/images/store_home.png", target: "_blank") do %>
+          <%= image_tag("/images/store_home.png",height: '300', width: '300') %>
+        <% end %>
+        <%= link_to("/images/store_home.png", target: "_blank") do %>
+          <%= image_tag("/images/store_grid.png",height: '300', width: '300') %>
+        <% end %>
+
       </div>
     </div>
+
+
+
+    <div>
+      <h2>
+        Shopify with BoosterApps
+      </h2>
+      <p>
+        Project description:
+        That was a great journey to Shopify platform. We build a lot of apps that are used around the globe by million of people.
+        Tools are related to: Seo Optimization, Sales Improvements, Site Performance Optimization, Currency Exchange and many others.
+      </p>
+      <p>
+      <span style="margin-bottom: 5px;">
+      Site:   https://apps.shopify.com/partners/booster-apps
+        Technologies: Ruby on Rails,Postgresql, Shopify + Shopify API, Heroku, Redis,Timescale(DB)
+    </span>
+      </p>
+      <div>
+        <%= link_to("/images/booster2.png", target: "_blank") do %>
+          <%= image_tag("/images/store_home.png",height: '300', width: '300') %>
+        <% end %>
+        <%= link_to("/images/booster1.png", target: "_blank") do %>
+          <%= image_tag("/images/store_grid.png",height: '300', width: '300') %>
+        <% end %>
+      </div>
+    </div>
+
 
   </article>
 </div>
