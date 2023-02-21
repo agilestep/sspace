@@ -46,17 +46,14 @@
     <pre>
       <code class="language-ruby">
          string = "ruby123"
-         regex = /^ruby\d$/
-         match_data = string.match(regex)
+         match_data = string.match(/ruby\d/)
          puts match_data[0]
-</code>
+      </code>
     </pre>
 
     <p>In this code, we create a string <code>string</code> and a regex pattern <code>regex</code>. We then call the <code>match</code> method on the string with the regex pattern as an argument. The <code>match</code> method returns a <code>MatchData</code> object that contains information about the matched string. We can access the matched string using the square bracket notation on the <code>MatchData</code> object. In this example, we simply print the matched string to the console.</p>
 
     <h2>Applying Regular Expressions to Strings</h2>
-
-    <p>In addition to the <code>match</code> method, Ruby provides a number of other methods for applying regex to strings. Here are some of the most commonly used methods:</p>
 
     <p>In addition to the <code>match</code> method, Ruby provides a number of other methods for applying regex to strings. Here are some of the most commonly used methods:</p>
 
