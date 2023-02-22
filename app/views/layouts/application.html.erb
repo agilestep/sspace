@@ -16,6 +16,7 @@
   <!--    To format ruby code -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
   <!--    Google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"  rel="stylesheet" />
 <style>
@@ -83,6 +84,10 @@
 <%= yield %>
 
 <script>
+  if (!document.copy_added){
+    hljs.addPlugin(new CopyButtonPlugin());
+      document.copy_added = true;
+  }
   //Parse and format code by highlight.js
     $( document ).ready(function() {
         $('pre code').each(function( index ) {
