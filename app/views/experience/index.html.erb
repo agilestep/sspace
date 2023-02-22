@@ -7,7 +7,9 @@
     margin-right: auto;
   }
 
-  h2{font-size: 1.8em; margin-left: 20%; margin-top: 40px; margin-bottom: 40px;}
+  h2{font-size: 1.8em;
+    margin-top: 40px;
+    margin-bottom: 40px;}
 
   span{
     font-weight: bolder;
@@ -27,6 +29,13 @@
 
   .container{
     display: flex;
+
+  }
+
+  #projects{
+    background-color: #494949;
+    opacity:0.9;
+    color: white;
   }
 
   #projects {
@@ -53,35 +62,75 @@
     margin-bottom: 5%;
 
   }
+  body{
+    background-image: url("/images/james-harrison-laptop_image.jpg");
+    background-repeat: no-repeat, repeat;
+    background-position: center; /* Center the image */
+    background-size: contain;
+    background-attachment: fixed;
+    background-color: black;
+  }
+
+  .h2_with_line{
+    display: block;padding-bottom: 5px; border-bottom: 5px solid rgba(57,255,139,0.48);
+  }
+
 </style>
 
 
 <div class="container">
   <div class="layout-margin"></div>
   <article id="projects" class="layout-item">
-    <h1> My Main Projects: </h1>
+    <h1> Some of my Projects: </h1>
+
 
     <div>
-      <h2>
-        Pipeline Management System at GlobeZenit
+      <h2 class="h2_with_line">
+        Shopify with BoosterApps - Wide Shopify Apps Range and Services
       </h2>
       <p>
-        I was Team leader for 4 projects based on Pipeguardian Core for gas companies from France, Belgium and Netherlands.
+        Project description:
+        That was a great journey to Shopify platform. We build a lot of apps that are used around the globe by million of people.
+        Tools are related to: Seo Optimization, Sales Improvements, Site Performance Optimization, Currency Exchange and many others.
+      </p>
+      <p>
+      <span style="margin-bottom: 5px;">
+      <p> <strong>Site:</strong>   https://apps.shopify.com/partners/booster-apps </p>
+      <p><strong>Technologies</strong>: Ruby on Rails,Postgresql, Shopify + Shopify API, Heroku, Redis,Timescale(DB)</p>
+      </span>
+      </p>
+      <div>
+        <%= link_to("/images/booster2.png", target: "_blank") do %>
+          <%= image_tag("/images/booster2.png",height: '200', width: '600') %>
+        <% end %>
+
+        <%= link_to("/images/booster1.png", target: "_blank") do %>
+          <%= image_tag("/images/booster1.png",height: '200', width: '400') %>
+        <% end %>
+
+      </div>
+    </div>
+
+
+    <div>
+      <h2 class="h2_with_line" >
+        Pipeline Management System at GlobeZenit
+      </h2>
+
+      <p>
+        I was <strong>Team Leader</strong> for 4 projects based on Pipeguardian Core for gas companies from France, Belgium and Netherlands.
         Those are big projects with comprehensive pipelines management abilities.
         I took entire responsibility for all aspects of the projects, I did team training, designed application architecture and even
         visit France, Belgium and Holland to speak face-to-face with our customers.
         Our client have been even such large companies as <a href="https://en.wikipedia.org/wiki/SABIC"> Sabic </a>
       </p>
       <p>
-        Technologies: .Net,Ruby on Rails,Oracle, Oracle Spatial, Microstation v8i
+        <strong>Technologies</strong>: .Net,Ruby on Rails,Oracle, Oracle Spatial, Microstation v8i
       </p>
 
       <p>
       <span>
       Site: http://www.globezenit.be
-    </span>
-        <span>
-      Dates - ???
     </span>
       </p>
 
@@ -98,9 +147,12 @@
     </div>
 
 
+
+
+
     <div>
-      <h2>
-        Shirt Magic
+      <h2 class="h2_with_line" >
+        Shirt Magic - Printing Company
       </h2>
 
       <p>
@@ -113,50 +165,49 @@
       </p>
       <p>
       <span>
-       Dates - September 2015 - April 2017
-       Technologies: Ruby on Rails,HTML5, Angular 1, HTML Canvas, Postgresql, DigitalOcean(Ubuntu + Unicorn + Nginx)
+      <p>
+        <strong>Technologies</strong>: Ruby on Rails,HTML5, Angular 1, HTML Canvas, Postgresql, DigitalOcean(Ubuntu + Unicorn + Nginx)
+      </p>
     </span>
       </p>
       <div>
         <%= link_to("/images/ShirtMagicHome.png", target: "_blank") do %>
 
           <%= image_tag("/images/ShirtMagicHome.png",height: '300', width: '300') %>
-          <% end %>
+        <% end %>
         <%= link_to("/images/ShirtMagicdesigner.png", target: "_blank") do %>
 
-        <%= image_tag("/images/ShirtMagicdesigner.png",height: '300', width: '300') %>
+          <%= image_tag("/images/ShirtMagicdesigner.png",height: '300', width: '300') %>
 
-          <% end %>
+        <% end %>
 
 
         <%= link_to("/images/ShirtMagicdesigner.png", target: "_blank") do %>
-        <%= image_tag("/images/ShirtMagicdesigner.png",height: '300', width: '300') %>
-          <% end %>
+          <%= image_tag("/images/ShirtMagicdesigner.png",height: '300', width: '300') %>
+        <% end %>
       </div>
     </div>
 
     <div>
-      <h2>
-        Kepard VPN
+      <h2 class="h2_with_line" >
+        Kepard - VPN Start-UP
       </h2>
       <p>
-        Project description
-        Kepard is very promising VPN service and this is a very interesting experience for me: I am working on tuning and implementation of the latest .Net technologies for the client part of the project.
-        http://www.kepard.com
+        Project description:
+        Kepard was very nice VPN start-up service and a very interesting experience for me:
+        I was working on tuning and implementation of the latest .Net technologies for the client part of the project.
       </p>
       <span>
-      <p>
-        Dates - ???
-      </p>
+         <p><strong>Technologies</strong>: .NET,Open VPN,DotRas,Threading </p>
     </span>
       <%= link_to("/images/ShirtMagicdesigner.png", target: "_blank") do %>
-        <%= image_tag("/images/vpn.png",height: '300', width: '300') %>
+        <%= image_tag("/images/vpn.png",height: '300', width: '300',class: 'center') %>
       <% end %>
     </div>
 
     <div>
-      <h2>
-        ShowMojo
+      <h2 class="h2_with_line">
+        ShowMojo - Real Estate App
       </h2>
       <p>
         Project description
@@ -175,30 +226,38 @@
       <% end %>
 
       <%= link_to("/images/ShowMojo_Map.png", target: "_blank") do %>
-      <%= image_tag("/images/ShowMojo_Map.png",height: '300', width: '300') %>
-        <% end %>
+        <%= image_tag("/images/ShowMojo_Map.png",height: '300', width: '300') %>
+      <% end %>
     </div>
 
 
     <div>
-      <h2>
-        MahjongTime
+      <h2 class="h2_with_line">
+        MahjongTime - Online Game
       </h2>
       <p>
         Mahjong Online - Online games and mahjong tournaments. You can play against other players 24/7
         I was working mostly on back-end logic ,with .NET(C#) ,Sql Server.
       </p>
       <span>
-      Site: https://www.mahjongtime.com
-    </span>
-      <span>
-      Dates - ???
+
+           <%= link_to("/images/mahjong_screen.png", target: "_blank") do %>
+             <%= image_tag("/images/mahjong_screen.png",height: '300', width: '300') %>
+          <% end %>
+
+        <%= link_to("/images/mahjong2.png", target: "_blank") do %>
+             <%= image_tag("/images/mahjong2.png",height: '300', width: '300') %>
+        <% end %>
+
+
+        <p>
+      Site: https://www.mahjongtime.com</p>
     </span>
 
     </div>
 
     <div>
-      <h2>
+      <h2 class="h2_with_line">
         Online book store.
       </h2>
       <p>
@@ -224,32 +283,6 @@
       </div>
     </div>
 
-
-
-    <div>
-      <h2>
-        Shopify with BoosterApps
-      </h2>
-      <p>
-        Project description:
-        That was a great journey to Shopify platform. We build a lot of apps that are used around the globe by million of people.
-        Tools are related to: Seo Optimization, Sales Improvements, Site Performance Optimization, Currency Exchange and many others.
-      </p>
-      <p>
-      <span style="margin-bottom: 5px;">
-      Site:   https://apps.shopify.com/partners/booster-apps
-        Technologies: Ruby on Rails,Postgresql, Shopify + Shopify API, Heroku, Redis,Timescale(DB)
-    </span>
-      </p>
-      <div>
-        <%= link_to("/images/booster2.png", target: "_blank") do %>
-          <%= image_tag("/images/store_home.png",height: '300', width: '300') %>
-        <% end %>
-        <%= link_to("/images/booster1.png", target: "_blank") do %>
-          <%= image_tag("/images/store_grid.png",height: '300', width: '300') %>
-        <% end %>
-      </div>
-    </div>
 
 
   </article>
