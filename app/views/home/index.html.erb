@@ -34,9 +34,10 @@
     background-color: #383844;
     opacity: 0.8;
     color: #6abf39;
-    font-size: 0.9em;
+    font-size: 1em;
     font-family: 'Jura', sans-serif;
     font-weight: bold;
+    letter-spacing: 0.1em;
     margin-top: 100px;
   }
 
@@ -81,7 +82,7 @@
     var typeInterval = setInterval(() => {
         printText(keyPresses)
         keyPresses += 1
-    }, 50)
+    }, 10)
 
 </script>
 
@@ -104,28 +105,28 @@
     </div>
 
   <div id="info-block-hidden" style="visibility: hidden">
-    <h2> Hello! My name is <strong> Serghei </strong> and I am <strong> FULL STACK </strong> <span class="red"> Ruby on Rails</span> developer with over <strong>10 years</strong> of experience!  </h2>
+    <h2> Hello! My name is <strong> Serghei </strong> and I am <strong> FULL STACK </strong> <span class=""> Ruby on Rails</span> developer with over <strong>11 years</strong> of experience!  </h2>
     <p>
-      If you are trying to build a <strong> GREAT</strong> site or software for your Business,or if you experience ANY issue with the existing one, I will be happy to assist you, because my profession is to HELP people and I have necessary SKILLS to do this.
-      I am not a <i class="fa-solid fa-user-ninja"></i> Ninja Developer, I am more like Samurai Developer <i class="fa-regular fa-torii-gate"></i> because my goals are: exceptional quality happy and protected client.
+      If you are trying to build a <strong> GREAT</strong> site or software for your <strong> BUSINESS</strong>,or if you experience <strong>ANY</strong> issue with the existing one, I will be happy to assist you, because my profession is to <strong>HELP</strong> people and I have necessary <strong>SKILLS</strong> to do this.
+      I am not a <i class="fa-solid fa-user-ninja"></i> Ninja Developer, I am more like Samurai Developer <i class="fa-regular fa-torii-gate"></i> because my goals are: strong productivity, exceptional quality happy and protected client.
     </p>
 
     <p>
-      <strong> Languages:</strong> Ruby,SQL,JavaScript,HTML5, CSS3,TypeScript,ERB,C#
+      <strong> Languages:</strong> Ruby,JavaScript,SQL,HTML5,CSS3,C#,TypeScript,ERB
     </p>
 
     <p>
-      <strong>Data:</strong> Postgresql,Redis,Elasticsearch,Oracle,OracleSpatial,SqlServer,MongoDB
+      <strong>Data:</strong> Postgresql,Redis,S3,Elasticsearch,Oracle,OracleSpatial,SqlServer
     </p>
     <p>
-      <strong> Skills:</strong> OOP, OOD, Agile Development,Adaptive web design, STRONG SEO Optimization, Nginx, Unicorn, Ruby on Rails, RSpec, ActiveAdmin, ActionMailer, ActiveRecord, Sidekiq, Ruby Gems, Payment Processing(Stripe, Paypal), SSL, APIs integration(facebook,google,amazon), Git, GitHub, Bitbucket, AJAX, JQuery, AngularJS, AngularJS 2, Fabric.js, Twitter Bootstrap, Datashift Spree, Klaviyo, prerender.io, ASP.NET MVC, LINQ, EF, WPF, ADO.NET, Unit Testing, Nunit, SVN, Microstation.
+      <strong> Skills:</strong> OOP,OOD,Ruby on Rails,AngularJS 1,AngularJS 2,Vue.Js,Payment Processing(Stripe, Paypal),Sidekiq PRO,Adaptive Web Design, STRONG SEO Optimization, NGinx, Unicorn,  RSpec,Ruby Gems,SSL, APIs integration(Facebook,Google,Amazon), Git, GitHub, Bitbucket, AJAX, JQuery, Fabric.js, Bootstrap, Klaviyo, Prerender.io,Agile Development, ASP.NET MVC, LINQ, EF, WPF, ADO.NET, Unit Testing, Nunit
     </p>
 
     <p>
       * I started with Ruby 1.8.7 and Ruby on Rails 2.0.2 so don't hesitate contacting me if you have an old application or you are try to migrate to new Ruby on Rails.(I have such experience also).
     </p>
 
-    <%= link_to "Get More Details", experience_index_path , class: '' %> OR <a href = "mailto: <%= my_email %>">Send Me an Email</a>
+    <%= link_to "Get More Details", experience_index_path , class: '' %> &nbsp; &nbsp; OR <a href = "mailto: <%= my_email %>">Send Me an Email</a>
 
   </div>
 </div>
