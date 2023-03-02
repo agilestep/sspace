@@ -63,6 +63,69 @@
     font-size: 1em;
     margin-left: 10px;
   }
+
+  .main-content2{
+    padding-top: 30px;
+    z-index: 999;
+    width: 100%;
+    opacity:0.9;
+    background-color: #383844;
+    color: white;
+    margin-top: 20px;
+    display: block;
+    flex-direction:row;
+  }
+  .rating
+  {
+    color: black;
+    margin-top: 20px;
+    display: inline-block;
+
+  }
+
+
+  .height-100{
+    height:100px;
+  }
+
+  .card{
+    border:none;
+  }
+
+  .ratings{
+    margin-right:10px;
+  }
+
+  .ratings i{
+    color:#cecece;
+    font-size:32px;
+  }
+
+  .rating-color{
+    color:#fbc634 !important;
+  }
+
+  .review-count{
+    font-weight:400;
+    margin-bottom:2px;
+    font-size:24px !important;
+  }
+
+  .small-ratings i{
+    color:#cecece;
+  }
+
+  .review-stat{
+    font-weight:300;
+    font-size:16px;
+    margin-bottom:2px;
+  }
+
+    .inline_image
+    {
+     display: inline-block;
+    }
+
 </style>
 
 <script type="text/javascript">
@@ -104,41 +167,169 @@
       <!--initially blank space and filled step by step-->
     </div>
 
-  <div id="info-block-hidden" style="visibility: hidden">
-    <h2> Hello! My name is <strong> Serghei </strong> and I am <strong> FULL STACK </strong> <span class=""> Ruby on Rails</span> developer with over <strong>11 years</strong> of experience!  </h2>
-    <p>
-      If you are trying to build a <strong> GREAT</strong> site or software for your <strong> BUSINESS</strong>,or if you experience <strong>ANY</strong> issue with the existing one, I will be happy to assist you, because my profession is to <strong>HELP</strong> people and I have necessary <strong>SKILLS</strong> to do this.
-      I am not a <i class="fa-solid fa-user-ninja"></i> Ninja Developer, I am more like Samurai Developer <i class="fa-regular fa-torii-gate"></i> because my goals are: strong productivity, exceptional quality happy and protected client.
-    </p>
+    <div class="main-content2">
 
-    <p>
-      <strong> Languages:</strong> Ruby,JavaScript,SQL,HTML5,CSS3,C#,TypeScript,ERB
-    </p>
+      <div class="inline_image">
+        <%= image_tag("/images/NicoVanHoof.png",width: '104',height: '92',class: "inline_image") %>
+      </div>
 
-    <p>
-      <strong>Data:</strong> Postgresql,Redis,AWS S3,Oracle,SqlServer,Elasticsearch
-    </p>
-    <p>
-      <strong>Server Managment:</strong> AWS EC2,Digital Ocean Droplets,NGinx, Unicorn,Puma
-    </p>
-    <p>
-      <strong>Version Control System:</strong> Git, GitHub, Bitbucket
-    </p>
+      <div class="inline_image" style="margin-top: 25px;">
 
-    <p>
-      <strong> Frameworks,APIs,Libs:</strong> AngularJS 1,AngularJS 2,Vue.Js, JQuery,Ruby on Rails,Sidekiq PRO,Payment Processing(Stripe, Paypal),APIs integration(Facebook,Google,Amazon),Fabric.js,Bootstrap,
-    </p>
+        <%= link_to "Nico Van Hoof CEO at Globe Digital Data", '  https://be.linkedin.com/in/nicovanhoof' %> </br>
+      &nbsp; &nbsp;Professional Evaluation:
+      <i class="fa fa-star rating-color"></i>
+      <i class="fa fa-star rating-color"></i>
+      <i class="fa fa-star rating-color"></i>
+      <i class="fa fa-star rating-color"></i>
+      <i class="fa fa-star rating-color"></i>
+      </br>
+        &nbsp; &nbsp;Team Member:
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        </br>
 
-    <p>
-      <strong> Concepts:</strong> OOP,OOD,Agile Software Development,Adaptive Web Design,SEO Optimization,Klaviyo
-    </p>
+      </div>
+      <p>
+        Serghei is a true hard-worker he has excellent professional skills and he is a very good team member.
+        He started as a Senior Developer and ended as a Solid Team Leader.
+      </p>
 
-    <p>
-      * I started with Ruby 1.8.7 and Ruby on Rails 2.0.2 so don't hesitate contacting me if you have an old application or you are try to migrate to new Ruby on Rails.(I have such experience also).
-    </p>
+    </div>
 
-    <%= link_to "Get More Details", experience_index_path , class: '' %> &nbsp; &nbsp; OR <a href = "mailto: <%= my_email %>">Send Me an Email</a>
 
+    <div class="main-content2">
+      <div class="inline_image">
+        <%= image_tag("/images/Todd Kriney.jfif",width: '104',height: '92',class: "inline_image") %>
+      </div>
+
+      <div class="inline_image" style="margin-top: 25px;">
+        <%= link_to "Co-Founder at Hit Run Steal", 'https://www.linkedin.com/in/todd-kriney-13b48827' %> </br>
+        &nbsp; &nbsp;Professional Evaluation:
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        </br>
+        &nbsp; &nbsp;Team Member:
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        </br>
+
+      </div>
+      <p>
+        The best programmer I have ever worked with. He worked on my site for over a year full time.
+        Was always available to have a call or chat. His work was great.
+        Would highly recommend working with Serghei on any RoR project.
+      </p>
+    </div>
+
+
+
+
+    <div class="main-content2">
+      <div class="inline_image">
+        <%= image_tag("/images/Stuart Chaney.png",width: '104',height: '92',class: "inline_image") %>
+      </div>
+
+      <div class="inline_image" style="margin-top: 25px;">
+        <%= link_to "Stuart Chaney Founder & CEO at Rivo", '  https://www.linkedin.com/in/stu-chaney' %> </br>
+        &nbsp; &nbsp;Professional Evaluation:
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        </br>
+        &nbsp; &nbsp;Team Member:
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        </br>
+
+      </div>
+      <p>
+        Hands down one of the best Rails developers I have ever worked with in my 10+ years of software. Amazing in every department
+      </p>
+    </div>
+
+
+    <div class="main-content2">
+      <div class="inline_image">
+        <%= image_tag("/images/david Sinton.jfif",width: '104',height: '92',class: "inline_image") %>
+      </div>
+
+      <div class="inline_image" style="margin-top: 25px;">
+        <%= link_to "David Sinton Co-Founder at Quiet Owl", 'https://www.linkedin.com/in/davidsinton' %> </br>
+        &nbsp; &nbsp;Professional Evaluation:
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        <i class="fa fa-star rating-color"></i>
+        </br>
+      </div>
+      <p>
+        "Did a great job on a challenging project.
+        Was available on-line when I needed him, and was always helpful and eager to please."
+      </p>
+    </div>
+
+
+
+    <div id="info-block-hidden" style="visibility: hidden">
+
+      <h2> Hello! My name is <strong> Serghei </strong> and I am <strong> FULL STACK </strong> <span class=""> Ruby on Rails</span> developer with over <strong>11 years</strong> of experience!  </h2>
+      <p>
+        If you are trying to build a <strong> GREAT</strong> site or software for your <strong> BUSINESS</strong>,or if you experience <strong>ANY</strong> issue with the existing one, I will be happy to assist you, because my profession is to <strong>HELP</strong> people and I have necessary <strong>SKILLS</strong> to do this.
+        I am not a <i class="fa-solid fa-user-ninja"></i> Ninja Developer, I am more like Samurai Developer <i class="fa-regular fa-torii-gate"></i> because my goals are: strong productivity, exceptional quality happy and protected client.
+      </p>
+
+      <p>
+        <strong> Languages:</strong> Ruby,JavaScript,SQL,HTML5,CSS3,C#,TypeScript,ERB
+      </p>
+
+      <p>
+        <strong>Data:</strong> Postgresql,Redis,AWS S3,Oracle,SqlServer,Elasticsearch
+      </p>
+      <p>
+        <strong>Server Managment:</strong> AWS EC2,Digital Ocean Droplets,NGinx, Unicorn,Puma
+      </p>
+      <p>
+        <strong>Version Control System:</strong> Git, GitHub, Bitbucket
+      </p>
+
+      <p>
+        <strong> Frameworks,APIs,Libs:</strong> AngularJS 1,AngularJS 2,Vue.Js, JQuery,Ruby on Rails,Sidekiq PRO,Payment Processing(Stripe, Paypal),APIs integration(Facebook,Google,Amazon),Fabric.js,Bootstrap,
+      </p>
+
+      <p>
+        <strong> Concepts:</strong> OOP,OOD,Agile Software Development,Adaptive Web Design,SEO Optimization,Klaviyo
+      </p>
+
+      <p>
+        * I started with Ruby 1.8.7 and Ruby on Rails 2.0.2 so don't hesitate contacting me if you have an old application or you are try to migrate to new Ruby on Rails.(I have such experience also).
+      </p>
+
+      <%= link_to "Get More Details", experience_index_path , class: '' %> &nbsp; &nbsp; OR <a href = "mailto: <%= my_email %>">Send Me an Email</a>
+
+      <div>
+
+        <p>
+
+
+
+        </p>
+
+      </div>
+    </div>
   </div>
-</div>
 </div>
