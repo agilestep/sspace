@@ -1,7 +1,3 @@
-<style>
-
-
-</style>
 
 <script type="text/javascript">
 
@@ -19,9 +15,7 @@
         textBody = closeTags(textBody)
         textBody += "&#9646"
 
-
         $("#info-content").html(textBody)
-
     }
 
     var typeInterval = setInterval(() => {
@@ -53,38 +47,35 @@
         return htmlString;
     }
 
-
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300" rel="stylesheet">
 
+<div class="main-content" style="">
 
-<div class="main-content">
-
-
-  <video autoplay loop muted playsinline style="position:absolute; top:30px; left:50px; bottom:50px; right:30px; width:95%; height:95%; object-fit:cover">
+  <video autoplay loop muted playsinline style="position:absolute; top:0px; left:0px; bottom:50px; right:0px; width:100%; height:100%; object-fit:fill">
     <source src="/dron2.mp4" type="video/mp4">
   </video>
 
-
-  <div id="info-block" >
+  <div id="info-block"  style="position: relative">
     <div id="info-content" style="">
       <!--initially blank space and filled step by step-->
     </div>
 
-    <div class=>
-
+    <div>
       <%= render 'reviews' %>
 
-
       <div id="info-block-hidden" style="visibility: hidden">
-
         <h2>
-          Hello! My name is <strong> Serghei </strong> and I am <strong> FULL STACK </strong> <span class=""> Ruby on Rails</span> developer with over <strong>11 years</strong> of experience!
+          Hello! My name is <strong> Serghei </strong> and I am <strong> FULL STACK </strong> <strong style="color: red;"> Ruby on Rails</strong> developer with over <strong>11 years</strong> of experience!
+        </h2>
+        <h2>
+          And I am ready to bring latest technologies to <strong>boost</strong> your <strong>business</strong>
         </h2>
         <p>
+
           If you are trying to build a <strong> GREAT</strong> site or software for your <strong> BUSINESS</strong>,or if you experience <strong>ANY</strong> issue with the existing one, I will be happy to assist you, because my profession is to <strong>HELP</strong> people and I have necessary <strong>SKILLS</strong> to do this.
           I am not a <i class="fa-solid fa-user-ninja"></i> Ninja Developer, I am more like Samurai Developer <i class="fa-regular fa-torii-gate"></i> because my goals are: strong productivity, exceptional quality happy and protected client.
         </p>
@@ -125,4 +116,4 @@
       </div>
     </div>
   </div>
-
+</div>
