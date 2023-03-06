@@ -1,0 +1,19 @@
+
+<div class="reviews">
+  <div class="display_inline">
+    <%= image_tag("/images/#{person[:image_src]}",width: '104',height: '92',class: "display_inline") %>
+  </div>
+
+  <div class="display_inline" style="margin-top: 25px;">
+    &nbsp;<i class="fa fa-linkedin"></i> <%= link_to person[:position], person[:linkedin] %> </br>
+    &nbsp; &nbsp;<i class="fa fa-cog"></i>  Professional Evaluation:
+    <%= stars person[:stars_a] %>
+    </br>
+    &nbsp;&nbsp;&nbsp;<i class="fa fa-users"></i> Team Member:
+    <%= stars person[:stars_b] %>
+    </br>
+  </div>
+  <p>
+    <%= person[:review_text] %>
+  </p>
+</div>

@@ -19,9 +19,18 @@
     justify-content:space-around;
   }
 
+  @media only screen and (min-width: 1200px) {
+    #info-block {
+      z-index: 999;
+      width: 50%;
+    }
+  }
 
-  #info-block{
-    z-index: 999; width: 50%;
+  @media only screen and (max-width: 1200px) {
+    #info-block {
+      z-index: 999;
+      width: 90%;
+    }
   }
 
   #info-block-hidden > strong{
@@ -39,6 +48,7 @@
     font-weight: bold;
     letter-spacing: 0.1em;
     margin-top: 100px;
+    transition: all .5s linear;
   }
 
   strong{
@@ -64,8 +74,8 @@
     margin-left: 10px;
   }
 
-  .main-content2{
-    padding-top: 30px;
+  .reviews{
+    padding-top: 10px;
     z-index: 999;
     width: 100%;
     opacity:0.9;
@@ -121,31 +131,81 @@
     margin-bottom:2px;
   }
 
-    .inline_image
-    {
-     display: inline-block;
-    }
+  .display_inline
+  {
+    display: inline-block;
+  }
+
+  .img{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .reviews
+  {
+    padding-left: 10px;
+  }
+
+  .fa-linkedin
+  {
+    margin-left: 9px;
+  }
+
 
 </style>
 
 <script type="text/javascript">
 
     var keyPresses = 1;
+    var contentHeight = 100;
     function printText(currentTextLength){
         var ourHtml = $('#info-block-hidden').html().toString();7
         var textBody = ""
         textBody = ourHtml.substring(0,currentTextLength);
         if (currentTextLength >= ourHtml.length){
             clearInterval(typeInterval)
+            $('.reviews').fadeIn('slow');
         }
+
+        textBody = closeTags(textBody)
         textBody += "&#9646"
+
+
         $("#info-content").html(textBody)
+
     }
 
     var typeInterval = setInterval(() => {
         printText(keyPresses)
         keyPresses += 1
-    }, 10)
+    }, 2)
+
+    function closeTags(htmlString) {
+        const match = htmlString.match(/<(\w+)(?=\s|>|$)/g) || [];
+        const openTags = [];
+        match.forEach(tag => {
+            const tagName = tag.replace(/<(\w+).*/, '$1');
+            if (!tagName.startsWith('/')) {
+                openTags.push(tagName);
+            } else {
+                while (openTags.length && `/${openTags[openTags.length - 1]}` !== tagName) {
+                    const closingTag = `</${openTags.pop()}>`;
+                    htmlString += closingTag;
+                }
+                if (openTags.length) {
+                    openTags.pop();
+                }
+            }
+        });
+        while (openTags.length) {
+            const closingTag = `</${openTags.pop()}>`;
+            htmlString += closingTag;
+        }
+        return htmlString;
+    }
+
 
 </script>
 
@@ -157,8 +217,8 @@
 <div class="main-content">
 
 
-  <video autoplay loop muted playsinline style="position:absolute; top:0; left:0; bottom:0; right:0; width:100%; height:100%; object-fit:cover;">
-    <source src="/city_drone.mp4" type="video/mp4">
+  <video autoplay loop muted playsinline style="position:absolute; top:30px; left:50px; bottom:50px; right:30px; width:95%; height:95%; object-fit:cover">
+    <source src="/dron2.mp4" type="video/mp4">
   </video>
 
 
@@ -167,169 +227,55 @@
       <!--initially blank space and filled step by step-->
     </div>
 
-    <div class="main-content2">
+    <div class=>
 
-      <div class="inline_image">
-        <%= image_tag("/images/NicoVanHoof.png",width: '104',height: '92',class: "inline_image") %>
-      </div>
-
-      <div class="inline_image" style="margin-top: 25px;">
-
-        <%= link_to "Nico Van Hoof CEO at Globe Digital Data", '  https://be.linkedin.com/in/nicovanhoof' %> </br>
-      &nbsp; &nbsp;Professional Evaluation:
-      <i class="fa fa-star rating-color"></i>
-      <i class="fa fa-star rating-color"></i>
-      <i class="fa fa-star rating-color"></i>
-      <i class="fa fa-star rating-color"></i>
-      <i class="fa fa-star rating-color"></i>
-      </br>
-        &nbsp; &nbsp;Team Member:
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        </br>
-
-      </div>
-      <p>
-        Serghei is a true hard-worker he has excellent professional skills and he is a very good team member.
-        He started as a Senior Developer and ended as a Solid Team Leader.
-      </p>
-
-    </div>
+      <%= render 'reviews' %>
 
 
-    <div class="main-content2">
-      <div class="inline_image">
-        <%= image_tag("/images/Todd Kriney.jfif",width: '104',height: '92',class: "inline_image") %>
-      </div>
+      <div id="info-block-hidden" style="visibility: hidden">
 
-      <div class="inline_image" style="margin-top: 25px;">
-        <%= link_to "Co-Founder at Hit Run Steal", 'https://www.linkedin.com/in/todd-kriney-13b48827' %> </br>
-        &nbsp; &nbsp;Professional Evaluation:
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        </br>
-        &nbsp; &nbsp;Team Member:
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        </br>
+        <h2>
+          Hello! My name is <strong> Serghei </strong> and I am <strong> FULL STACK </strong> <span class=""> Ruby on Rails</span> developer with over <strong>11 years</strong> of experience!
+        </h2>
+        <p>
+          If you are trying to build a <strong> GREAT</strong> site or software for your <strong> BUSINESS</strong>,or if you experience <strong>ANY</strong> issue with the existing one, I will be happy to assist you, because my profession is to <strong>HELP</strong> people and I have necessary <strong>SKILLS</strong> to do this.
+          I am not a <i class="fa-solid fa-user-ninja"></i> Ninja Developer, I am more like Samurai Developer <i class="fa-regular fa-torii-gate"></i> because my goals are: strong productivity, exceptional quality happy and protected client.
+        </p>
 
-      </div>
-      <p>
-        The best programmer I have ever worked with. He worked on my site for over a year full time.
-        Was always available to have a call or chat. His work was great.
-        Would highly recommend working with Serghei on any RoR project.
-      </p>
-    </div>
-
-
-
-
-    <div class="main-content2">
-      <div class="inline_image">
-        <%= image_tag("/images/Stuart Chaney.png",width: '104',height: '92',class: "inline_image") %>
-      </div>
-
-      <div class="inline_image" style="margin-top: 25px;">
-        <%= link_to "Stuart Chaney Founder & CEO at Rivo", '  https://www.linkedin.com/in/stu-chaney' %> </br>
-        &nbsp; &nbsp;Professional Evaluation:
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        </br>
-        &nbsp; &nbsp;Team Member:
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        </br>
-
-      </div>
-      <p>
-        Hands down one of the best Rails developers I have ever worked with in my 10+ years of software. Amazing in every department
-      </p>
-    </div>
-
-
-    <div class="main-content2">
-      <div class="inline_image">
-        <%= image_tag("/images/david Sinton.jfif",width: '104',height: '92',class: "inline_image") %>
-      </div>
-
-      <div class="inline_image" style="margin-top: 25px;">
-        <%= link_to "David Sinton Co-Founder at Quiet Owl", 'https://www.linkedin.com/in/davidsinton' %> </br>
-        &nbsp; &nbsp;Professional Evaluation:
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        <i class="fa fa-star rating-color"></i>
-        </br>
-      </div>
-      <p>
-        "Did a great job on a challenging project.
-        Was available on-line when I needed him, and was always helpful and eager to please."
-      </p>
-    </div>
-
-
-
-    <div id="info-block-hidden" style="visibility: hidden">
-
-      <h2> Hello! My name is <strong> Serghei </strong> and I am <strong> FULL STACK </strong> <span class=""> Ruby on Rails</span> developer with over <strong>11 years</strong> of experience!  </h2>
-      <p>
-        If you are trying to build a <strong> GREAT</strong> site or software for your <strong> BUSINESS</strong>,or if you experience <strong>ANY</strong> issue with the existing one, I will be happy to assist you, because my profession is to <strong>HELP</strong> people and I have necessary <strong>SKILLS</strong> to do this.
-        I am not a <i class="fa-solid fa-user-ninja"></i> Ninja Developer, I am more like Samurai Developer <i class="fa-regular fa-torii-gate"></i> because my goals are: strong productivity, exceptional quality happy and protected client.
-      </p>
-
-      <p>
-        <strong> Languages:</strong> Ruby,JavaScript,SQL,HTML5,CSS3,C#,TypeScript,ERB
-      </p>
-
-      <p>
-        <strong>Data:</strong> Postgresql,Redis,AWS S3,Oracle,SqlServer,Elasticsearch
-      </p>
-      <p>
-        <strong>Server Managment:</strong> AWS EC2,Digital Ocean Droplets,NGinx, Unicorn,Puma
-      </p>
-      <p>
-        <strong>Version Control System:</strong> Git, GitHub, Bitbucket
-      </p>
-
-      <p>
-        <strong> Frameworks,APIs,Libs:</strong> AngularJS 1,AngularJS 2,Vue.Js, JQuery,Ruby on Rails,Sidekiq PRO,Payment Processing(Stripe, Paypal),APIs integration(Facebook,Google,Amazon),Fabric.js,Bootstrap,
-      </p>
-
-      <p>
-        <strong> Concepts:</strong> OOP,OOD,Agile Software Development,Adaptive Web Design,SEO Optimization,Klaviyo
-      </p>
-
-      <p>
-        * I started with Ruby 1.8.7 and Ruby on Rails 2.0.2 so don't hesitate contacting me if you have an old application or you are try to migrate to new Ruby on Rails.(I have such experience also).
-      </p>
-
-      <%= link_to "Get More Details", experience_index_path , class: '' %> &nbsp; &nbsp; OR <a href = "mailto: <%= my_email %>">Send Me an Email</a>
-
-      <div>
+        <p >
+          <strong> Languages:</strong> Ruby,JavaScript,SQL,HTML5,CSS3,C#,TypeScript,ERB
+        </p>
 
         <p>
+          <strong>Data:</strong> Postgresql,Redis,AWS S3,Oracle,SqlServer,Elasticsearch
+        </p>
+        <p>
+          <strong>Server Managment:</strong> AWS EC2,Digital Ocean Droplets,NGinx, Unicorn,Puma
+        </p>
+        <p>
+          <strong>Version Control System:</strong> Git, GitHub, Bitbucket
+        </p>
 
+        <p>
+          <strong> Frameworks,APIs,Libs:</strong> AngularJS 1,AngularJS 2,Vue.Js, JQuery,Ruby on Rails,Sidekiq PRO,Payment Processing(Stripe, Paypal),
+          APIs integration(Facebook,Google,Amazon),Fabric.js,Bootstrap,
+        </p>
 
+        <p>
+          <strong> Concepts:</strong> OOP,OOD,Agile Software Development,Adaptive Web Design,SEO Optimization
+        </p>
 
+        <p>
+          * I started with Ruby 1.8.7 and Ruby on Rails 2.0.2 so don't hesitate contacting me if you have an old application or you are try to migrate to new Ruby on Rails.(I have such experience also).
+        </p>
+
+        <%= link_to "Get More Details", experience_index_path , class: '' %> &nbsp; &nbsp; OR <a href = "mailto: <%= my_email %>">Send Me an Email</a>
+
+        <p style="margin-top: 20px;">
+          * This Site is hosted on <strong> AWS EC2 </strong> + <strong>Ruby on Rails : 7.0.4.2 </strong>
         </p>
 
       </div>
     </div>
   </div>
-</div>
+

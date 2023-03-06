@@ -1,0 +1,9 @@
+<div id="reviews_block" class="reviews" style="display: none;">
+
+  <div>
+    <!--  Render All the reviews -->
+    <% @reviews.each do |k,v| %>
+      <%= render "review_item",:person => v %>
+    <% end %>
+  </div>
+</div>
