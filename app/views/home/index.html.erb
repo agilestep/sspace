@@ -2,8 +2,7 @@
 <script type="text/javascript">
 
     var keyPresses = 1;
-    var contentHeight = 100;
-    function printText(currentTextLength){
+    function homePrintText(currentTextLength){
         var ourHtml = $('#info-block-hidden').html().toString();7
         var textBody = ""
         textBody = ourHtml.substring(0,currentTextLength);
@@ -11,49 +10,32 @@
             clearInterval(typeInterval)
             $('.reviews').fadeIn('slow');
         }
-
-        textBody = closeTags(textBody)
-        textBody += "&#9646"
-
+        textBody += "&#9646";
         $("#info-content").html(textBody)
     }
 
     var typeInterval = setInterval(() => {
-        printText(keyPresses)
+        homePrintText(keyPresses)
         keyPresses += 1
     }, 2)
 
-    function closeTags(htmlString) {
-        const match = htmlString.match(/<(\w+)(?=\s|>|$)/g) || [];
-        const openTags = [];
-        match.forEach(tag => {
-            const tagName = tag.replace(/<(\w+).*/, '$1');
-            if (!tagName.startsWith('/')) {
-                openTags.push(tagName);
-            } else {
-                while (openTags.length && `/${openTags[openTags.length - 1]}` !== tagName) {
-                    const closingTag = `</${openTags.pop()}>`;
-                    htmlString += closingTag;
-                }
-                if (openTags.length) {
-                    openTags.pop();
-                }
-            }
-        });
-        while (openTags.length) {
-            const closingTag = `</${openTags.pop()}>`;
-            htmlString += closingTag;
-        }
-        return htmlString;
-    }
 
 </script>
+
+<style>
+  .padding-15{
+    padding: 15px 15px 15px 15px;
+  }
+  home > p{
+    padding: 5px 15px 5px 15px;
+  }
+</style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300" rel="stylesheet">
 
-<div class="main-content" >
+<div class="home main-content" >
 
   <video autoplay loop muted playsinline style="position:fixed; top:0px; left:0px; bottom:50px; right:0px; width:100%; height:100%; object-fit:fill">
     <source src="/dron2.mp4" type="video/mp4">
@@ -68,28 +50,29 @@
       <%= render 'reviews' %>
 
       <div id="info-block-hidden" style="visibility: hidden">
-        <h2>
+        <h2 class="padding-15">
           Hello! My name is <strong> Serghei </strong> and I am <strong> FULL STACK </strong> <strong style="color: red;"> Ruby on Rails</strong> developer with over <strong>11 years</strong> of experience!
-        </h2>
-        <h2>
-          And I am ready to bring latest technologies to <strong>boost</strong> your <strong>business</strong>
+        </br>
+          And I am ready to bring latest tech to <strong>Boost</strong> your <strong>Business</strong>
         </h2>
         <p>
-
-          If you are trying to build a <strong> GREAT</strong> site or software for your <strong> BUSINESS</strong>,or if you experience <strong>ANY</strong> issue with the existing one, I will be happy to assist you, because my profession is to <strong>HELP</strong> people and I have necessary <strong>SKILLS</strong> to do this.
-          I am not a <i class="fa-solid fa-user-ninja"></i> Ninja Developer, I am more like Samurai Developer <i class="fa-regular fa-torii-gate"></i> because my goals are: strong productivity, exceptional quality happy and protected client.
+          If you are trying to build a <strong>GREAT</strong> site or software, or if you experience <strong>ANY</strong> issue with the existing one.
+          I will be happy to assist you, because my profession is to <strong>HELP</strong> people and I have necessary <strong>SKILLS</strong> to do this.
+          I am not a <strong>Ninja Developer</strong>, I am more like <strong>Samurai Developer</strong> because my goals are: strong productivity, exceptional quality happy and protected client.
         </p>
 
-        <p >
+        <p>
           <strong> Languages:</strong> Ruby,JavaScript,SQL,HTML5,CSS3,C#,TypeScript,ERB
         </p>
 
         <p>
           <strong>Data:</strong> Postgresql,Redis,AWS S3,Oracle,SqlServer,Elasticsearch
         </p>
+
         <p>
           <strong>Server Managment:</strong> AWS EC2,Digital Ocean Droplets,NGinx, Unicorn,Puma
         </p>
+
         <p>
           <strong>Version Control System:</strong> Git, GitHub, Bitbucket
         </p>
@@ -114,6 +97,8 @@
         </p>
 
       </div>
+
+
     </div>
   </div>
 </div>
