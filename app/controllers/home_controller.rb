@@ -34,7 +34,7 @@ class HomeController < ApplicationController
             linkedin: 'https://www.linkedin.com/in/davidsinton',
             image_src: 'david Sinton.jfif',
             review_text: 'Did a great job on a challenging project.
-                          Was available on-line when I needed him, and was always helpful and eager to please.',
+                          Was always available when I needed him, and was always helpful and eager to please.',
             stars_a: 5,
             stars_b: 5,
 
