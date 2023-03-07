@@ -53,19 +53,34 @@
     align-items: center;
   }
 
-  .layout-margin{
-    width: 20%;
+
+  @media only screen and (min-width: 1200px) {
+    .layout-margin{
+      width: 20%;
+    }
+
+    .layout-item{
+      width: 60%;
+    }
   }
 
-  .layout-item{
-    width: 60%;
+  @media only screen and (max-width: 1200px) {
+    .layout-margin{
+      width: 1%;
+    }
+
+    .layout-item{
+      width: 100%;
+    }
   }
+
   img{
     display: inline-block;
     margin-left: 5%;
     margin-bottom: 5%;
 
   }
+
   body{
     background-image: url("/images/james-harrison-laptop_image.jpg");
     background-repeat: no-repeat, repeat;
@@ -80,12 +95,76 @@
     border-top: 5px solid rgba(57,255,139,0.48);
   }
 
+  @media only screen and (min-width: 1200px) {
+    .image6,.image9,.image10,.image11{
+      height: 300px;
+      width: 400px;
+    }
+    .image5,.image7,.image8,.image12,.image13,.image14,.image15,.image16{
+      height: 300px;
+      width: 300px;
+    }
 
+    .image1{
+      height: 180px;
+      width: 400px;
+    }
+    .image2{
+      height: 150px;
+      width: 300px;
+    }
+
+    .image3{
+      height: 180px;
+      width: 400px;
+    }
+    .image4{
+      height: 150px;
+      width: 300px;
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .image6,.image11{
+      height: 200px;
+      width: 300px;
+    }
+
+    .image9,.image10
+    {
+      height: 200px;
+      width: 200px;
+    }
+
+    .image5,.image7,.image8,.image12,.image13,.image14,.image15,.image16{
+      height: 200px;
+      width: 290px;
+    }
+
+    .image1{
+      height: 120px;
+      width: 300px;
+    }
+    .image2{
+      height: 120px;
+      width: 270px;
+    }
+
+    .image3{
+      height: 120px;
+      width: 300px;
+    }
+    .image4{
+      height: 120px;
+      width: 270px;
+    }
+  }
+
+    
 </style>
 
 
 <div class="container">
-  <div class="layout-margin"></div>
   <article id="projects" class="layout-item">
     <h1> Some of Projects: </h1>
 
@@ -106,23 +185,20 @@
       </p>
       <div>
         <%= link_to("/images/booster2.png", target: "_blank") do %>
-          <%= image_tag("/images/booster2.png",height: '180', width: '400') %>
+          <%= image_tag("/images/booster2.png",class: 'image1') %>
         <% end %>
 
         <%= link_to("/images/speed.png", target: "_blank") do %>
-          <%= image_tag("/images/speed.png",height: '150', width: '300') %>
+          <%= image_tag("/images/speed.png",class: 'image2') %>
         <% end %>
 
         <%= link_to("/images/booster1.png", target: "_blank") do %>
-          <%= image_tag("/images/booster1.png",height: '180', width: '400') %>
+          <%= image_tag("/images/booster1.png",class: 'image3') %>
         <% end %>
-
 
         <%= link_to("/images/upsell.png", target: "_blank") do %>
-          <%= image_tag("/images/upsell.png",height: '150', width: '300') %>
+          <%= image_tag("/images/upsell.png",class: 'image4') %>
         <% end %>
-
-
 
       </div>
 
@@ -146,18 +222,19 @@
       </p>
 
       <p>
-      <span>
-      Site: http://www.globezenit.be
-    </span>
+        <span>
+         Site: http://www.globezenit.be
+        </span>
       </p>
 
+      
       <div>
         <%= link_to("/images/pipeline_home.png", target: "_blank") do %>
-          <%= image_tag("/images/pipeline_home.png",height: '300', width: '300') %>
+          <%= image_tag("/images/pipeline_home.png",class: 'image5') %>
         <% end %>
 
         <%= link_to("/images/pipeline_map.png", target: "_blank") do %>
-          <%= image_tag("/images/pipeline_map.png",height: '300', width: '400') %>
+          <%= image_tag("/images/pipeline_map.png",class: 'image6') %>
         <% end %>
       </div>
     </div>
@@ -184,11 +261,11 @@
       </p>
       <div>
         <%= link_to("/images/ShirtMagicHome.png", target: "_blank") do %>
-          <%= image_tag("/images/ShirtMagicHome.png",height: '300', width: '300') %>
+          <%= image_tag("/images/ShirtMagicHome.png",class: 'image7') %>
         <% end %>
 
         <%= link_to("/images/ShirtMagicdesigner.png", target: "_blank") do %>
-          <%= image_tag("/images/ShirtMagicdesigner.png",height: '300', width: '300') %>
+          <%= image_tag("/images/ShirtMagicdesigner.png",class: 'image8') %>
         <% end %>
       </div>
     </div>
@@ -205,9 +282,8 @@
       <span>
          <p><strong>Technologies</strong>: .NET,Open VPN,DotRas,Threading </p>
     </span>
-      <%= link_image src: "vpn.png", width: '300', height: '400' %>
-
-      <%= link_image src: "vpn2.png", width: '300', height: '400' %>
+      <%= link_image src: "vpn.png", class_name: 'image9' %>
+      <%= link_image src: "vpn2.png", class_name: 'image10' %>
     </div>
 
     <div>
@@ -224,11 +300,11 @@
       </p>
 
       <%= link_to("/images/ShowMojo_home.png", target: "_blank") do %>
-        <%= image_tag("/images/ShowMojo_home.png",height: '300', width: '400') %>
+        <%= image_tag("/images/ShowMojo_home.png",class: 'image11') %>
       <% end %>
 
       <%= link_to("/images/ShowMojo_Map.png", target: "_blank") do %>
-        <%= image_tag("/images/ShowMojo_Map.png",height: '300', width: '300') %>
+        <%= image_tag("/images/ShowMojo_Map.png",class: 'image12') %>
       <% end %>
     </div>
 
@@ -244,11 +320,11 @@
       <span>
 
            <%= link_to("/images/mahjong_screen.png", target: "_blank") do %>
-             <%= image_tag("/images/mahjong_screen.png",height: '300', width: '300') %>
+             <%= image_tag("/images/mahjong_screen.png",class: 'image13') %>
           <% end %>
 
         <%= link_to("/images/mahjong2.png", target: "_blank") do %>
-             <%= image_tag("/images/mahjong2.png",height: '300', width: '300') %>
+             <%= image_tag("/images/mahjong2.png",class: 'image14') %>
         <% end %>
 
 
@@ -276,10 +352,11 @@
       <div>
 
         <%= link_to("/images/store_home.png", target: "_blank") do %>
-          <%= image_tag("/images/store_home.png",height: '300', width: '300') %>
+          <%= image_tag("/images/store_home.png",class: 'image15') %>
         <% end %>
+
         <%= link_to("/images/store_home.png", target: "_blank") do %>
-          <%= image_tag("/images/store_grid.png",height: '300', width: '300') %>
+          <%= image_tag("/images/store_grid.png",class: 'image16') %>
         <% end %>
 
       </div>
