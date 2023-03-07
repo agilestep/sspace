@@ -8,7 +8,7 @@
         textBody = ourHtml.substring(0,currentTextLength);
         if (currentTextLength >= ourHtml.length){
             clearInterval(typeInterval)
-            $('.reviews').fadeIn('slow');
+            $('#reviews_block').fadeIn('slow');
         }
         textBody += "&#9646";
         $("#info-content").html(textBody)
@@ -27,8 +27,11 @@
     padding: 15px 15px 15px 15px;
   }
   home > p{
-    padding: 5px 15px 5px 15px;
+    padding: 5px 15px 5px 10px;
   }
+    strong{
+      color: #f2f2f2;
+    }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,14 +54,13 @@
 
       <div id="info-block-hidden" style="visibility: hidden">
         <h2 class="padding-15">
-          Hello! My name is <strong> Serghei </strong> and I am <strong> FULL STACK </strong> <strong style="color: red;"> Ruby on Rails</strong> developer with over <strong>11 years</strong> of experience!
-        </br>
-          And I am ready to bring latest tech to <strong>Boost</strong> your <strong>Business</strong>
+          Hello! My name is <strong> Serghei </strong> and I am <strong> FULL STACK </strong>  Ruby on Rails Developer and Team Leader with over <strong>11 years</strong> of experience
+          and I am ready to bring latest tech to <strong>Boost</strong> your <strong>Business</strong>
         </h2>
         <p>
-          If you are trying to build a <strong>GREAT</strong> site or software, or if you experience <strong>ANY</strong> issue with the existing one.
-          I will be happy to assist you, because my profession is to <strong>HELP</strong> people and I have necessary <strong>SKILLS</strong> to do this.
-          I am not a <strong>Ninja Developer</strong>, I am more like <strong>Samurai Developer</strong> because my goals are: strong productivity, exceptional quality happy and protected client.
+          If you are trying to create a <strong>GREAT</strong> website or software, or if you experience <strong>ANY</strong> problem with the existing one.
+          I will be happy to assist you, because my job is to <strong>HELP</strong> people and I have the necessary <strong>SKILLS</strong> to do so.
+          I am not a <strong>Ninja Developer</strong>. I am rather a <strong>Samurai Developer</strong> because my goals are: strong productivity, exceptional quality, happy and protected customer.
         </p>
 
         <p>
