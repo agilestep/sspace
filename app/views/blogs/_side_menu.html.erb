@@ -1,6 +1,7 @@
 <div class="sidebar">
-  <h2>Articles</h2>
-  <ul>
+
+  <ul id="vertical_sidebar">
+    <h2>Articles</h2>
     <%= link_to "Why Rails in 2023", blogs_why2023_path , class: 'nav-link py-2 px-0 px-lg-2' %>
 
     <%= link_to "About Regex", blogs_regex_path , class: 'nav-link py-2 px-0 px-lg-2' %>
@@ -12,4 +13,21 @@
     <%= link_to "Blocks", blogs_blocks_and_path , class: 'nav-link py-2 px-0 px-lg-2' %>
 
   </ul>
+
+  <div id="horizontal_sidebar">
+
+    <h2>Articles</h2>
+
+    <%= link_to "Why Rails in 2023", blogs_why2023_path , class: 'nav-link py-2 px-0 px-lg-2' %>
+
+    <%= link_to "About Regex", blogs_regex_path , class: 'nav-link py-2 px-0 px-lg-2' %>
+
+    <%= link_to "About Tricks", blogs_tricks_path , class: 'nav-link py-2 px-0 px-lg-2' %>
+
+    <%= link_to "Method Args", blogs_method_arguments_path , class: 'nav-link py-2 px-0 px-lg-2' %>
+
+    <%= link_to "Blocks", blogs_blocks_and_path , class: 'nav-link py-2 px-0 px-lg-2' %>
+
+  </div>
+
 </div>
