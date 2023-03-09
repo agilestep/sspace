@@ -41,11 +41,36 @@
     transition: all .5s linear;
 }
 
-.home > strong{
+.home strong{
     color: #fffdfd;
     opacity: 1;
     font-weight: bolder;
 }
+
+.home p
+{
+  padding: 5px 15px 5px 10px;
+}
+
+.padding-15{
+    padding: 15px 15px 15px 15px;
+}
+
+.home strong{
+    color: #f2f2f2;
+}
+
+.home img{
+    cursor: pointer;
+}
+
+.home .btn {
+    border-color: #6abf39;
+    color:  #6abf39;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
 
 #info-block-hidden{
     visibility: hidden;
