@@ -1,27 +1,4 @@
 
-<script type="text/javascript">
-
-    var   keyPresses = 1;
-    const TYPING_SPEED = 1;
-
-    function homePrintText(currentTextLength){
-        var ourHtml = $('#info-block-hidden').html().toString();
-        var textBody = ""
-        textBody = ourHtml.substring(0,currentTextLength);
-        if (currentTextLength >= ourHtml.length){
-            clearInterval(typeInterval)
-            $('#reviews_block').fadeIn('slow');
-            $('#info-block-hidden').html("");
-        }
-        textBody += "&#9646";
-        $("#info-content").html(textBody)
-    }
-
-    var typeInterval = setInterval(() => {
-        homePrintText(keyPresses)
-        keyPresses += 1
-    }, TYPING_SPEED)
-</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,7 +59,7 @@
           <strong> Concepts:</strong> OOP,OOD,Agile Software Development,Adaptive Web Design,SEO Optimization
         </p>
 
-        <%= link_to "Get More Details", experience_index_path,class: "btn btn-important" %> &nbsp; &nbsp; <a class="btn" href = "mailto: <%= my_email %>">Send Me an Email</a>
+        <%= link_to "Get More Details", experience_index_path,class: "btn btn-important" %>  <a class="btn" href = "mailto: <%= my_email %>">Send Me an Email</a>
 
         <p style="margin-top: 20px;">
           * This Website is Hosted on <strong> AWS EC2 </strong> + <strong> Ruby on Rails : 7.0.4.2 </strong>
@@ -91,3 +68,40 @@
     </div>
   </div>
 </div>
+
+
+
+
+<script type="text/javascript">
+
+
+    var   keyPresses = 1;
+    const TYPING_SPEED = 1;
+
+    function homePrintText(currentTextLength){
+        localStorage.setItem('myCat', 'Tom');
+        var ourHtml = $('#info-block-hidden').html().toString();
+        var textBody = ""
+        textBody = ourHtml.substring(0,currentTextLength);
+        if (currentTextLength >= ourHtml.length){
+            clearInterval(typeInterval)
+            $('#reviews_block').fadeIn('slow');
+            $('#info-block-hidden').html("");
+        }
+        textBody += "&#9646";
+        $("#info-content").html(textBody)
+    }
+
+    if (localStorage.getItem('myCat') === 'Tom'){
+        var ourHtml = $('#info-block-hidden').html().toString();
+        $("#info-content").html(ourHtml)
+        $('#reviews_block').fadeIn('slow');
+    }
+    else {
+        var typeInterval = setInterval(() => {
+            homePrintText(keyPresses)
+            keyPresses += 1
+        }, TYPING_SPEED)
+    }
+
+</script>
