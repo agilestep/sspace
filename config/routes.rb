@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'freewill/index'
   get 'experience/index'
   get 'experience/show'
   get 'background/index'
