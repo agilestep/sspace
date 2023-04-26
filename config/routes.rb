@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'experience/show'
   get 'background/index'
 
+  get 'space/index'
+
   get 'blogs/index'
   get 'blogs/why2023'
   get 'blogs/blocks_and'
