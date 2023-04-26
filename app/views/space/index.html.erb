@@ -310,7 +310,7 @@
 
       <p>
         </br>
-        Here can use input to update data:
+        Here is how you can use input to update data:
       <pre>
       <code class="language-html">
 
@@ -318,10 +318,8 @@
       His name is: {name}
 
       Result:
-
-      &lt;input type=&quot;text&quot; s-bind=&quot;name&quot; value=&quot;Tomas&quot;&gt;&lt;/input&gt;
       His name is: Tomas
-        </code>
+      </code>
     </pre>
       </p>
 
@@ -334,14 +332,12 @@
           let b = 66
           a + b
         &lt;/div&gt;
-
         Result:
 
          &lt;div&gt;
             99
           &lt;/div&gt;
       </code>
-
     </pre>
       </p>
 
@@ -365,7 +361,7 @@
       <pre>
         <code class="language-html">
     &lt;div s-eval&gt;
-        b = :name + &quot; &quot; + :age;
+        b = #name + &quot; &quot; + #age;
         console.log(b);
     &lt;/div&gt;
     Result:
@@ -374,10 +370,23 @@
       </pre>
       </p>
 
+
+    <p>
+      Do you want to generate HTML based on your data ?
+    <pre>
+        <code class="language-html">
+          &lt;div s-eval&gt;
+             title ='&lt;h&gt;' + #name.toUpperCase() + '&lt;/h&gt;'
+             title
+         &lt;/div&gt;
+        </code>
+      </pre>
+    </p>
+
+
       <h3>How it works:</h3>
       <p>
         Data fields will automatically get <span>double direction binding </span>. So if you run:
-
       <pre>
         <code class="language-js">
          space.data.name = "New Name"
@@ -396,14 +405,19 @@
       </p>
 
       <p>
+        Does space.js have to  render things constantly by using a timer ?
+        No rendering will happen at initialization time and if some data was changed.
+        Only elements that are related to updated data will be rendered.
+      </p>
+
+      <p>
         Do you want to try it? Please feel free to test it:
         <a href="/space.min.js" class="btn btn-important download" download>
-          Download - Space.min.js(8,9kB)
+          Download - Space.min.js - Version(0.01) (6.7kB)
         </a>
       </p>
 
-
-      <h3 style="color: #ff7772"> * This Library is still is in Beta Stage - please don't use it on production! </h3>
+      <h3 style="color: #ff7772"> * This Library is still is in Alpha stage - please don't use it on production! </h3>
 
   </article>
 </div>
