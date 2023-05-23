@@ -383,6 +383,26 @@
       </pre>
     </p>
 
+      <p>
+        Do you want to show or hide an item based on condition ?
+      <pre>
+        <code class="language-html">
+            <div s-show="true">
+              This will be visible
+            </div>
+            <div s-show="false">
+              This will not be visible
+            </div>
+
+            <div s-show="!#user.active?">
+              This is an active user
+            </div>
+
+        </code>
+      </pre>
+
+      </p>
+
 
       <h3>How it works:</h3>
       <p>
@@ -400,6 +420,16 @@
       <pre>
         <code class="language-js">
         space.cars[3] = {name: "Tesla", model: 'Model S'}
+        </code>
+      </pre>
+      </p>
+
+      <p>
+        To trigger array re-render on new or deleted items please use array.push or array.pop function.
+      <pre>
+        <code class="language-js">
+          space.cars.push({name: "Tesla", model: 'Model S'})
+          space.cats.pop()
         </code>
       </pre>
       </p>
