@@ -15,9 +15,16 @@
 
     <pre>
       <code class="language-ruby">
-        def greeting(name, age)
-          puts "Hello, #{name}! You are #{age} years old."
-        end
+    def greeting(name, age)
+      puts "Hello, #{name}! You are #{age} years old."
+    end
+
+    #Parentheses are not obligatory:
+
+    def greeting name, age
+      puts "Hello, #{name}! You are #{age} years old."
+    end
+
       </code>
     </pre>
 
@@ -32,12 +39,12 @@
 
     <pre>
       <code class="language-ruby">
-        def greeting(name, age = 30)
-          puts "Hello, #{name}! You are #{age} years old."
-        end
+    def greeting(name, age = 30)
+      puts "Hello, #{name}! You are #{age} years old."
+    end
 
-        greeting("Alice") # Output: "Hello, Alice! You are 30 years old."
-        greeting("Bob", 25) # Output: "Hello, Bob! You are 25 years old."
+    greeting("Alice") # Output: "Hello, Alice! You are 30 years old."
+    greeting("Bob", 25) # Output: "Hello, Bob! You are 25 years old."
       </code>
      </pre>
 
@@ -53,12 +60,12 @@
 
     <pre>
     <code class="language-ruby">
-      def greeting(name:, age: 30)
-        puts "Hello, #{name}! You are #{age} years old."
-      end
+    def greeting(name:, age: 30)
+      puts "Hello, #{name}! You are #{age} years old."
+    end
 
-      greeting(name: "Alice") # Output: "Hello, Alice! You are 30 years old."
-      greeting(name: "Bob", age: 25) # Output: "Hello, Bob! You are 25 years old."
+    greeting(name: "Alice") # Output: "Hello, Alice! You are 30 years old."
+    greeting(name: "Bob", age: 25) # Output: "Hello, Bob! You are 25 years old."
     </code>
   </pre>
 
@@ -66,11 +73,107 @@
       In this example, we define a method called greeting that takes two named arguments: name and age. We set the default value of age to 30. If age is not passed as an argument, the default value will be used.
     </p>
 
+    <h2>Using method reference as an argument</h2>
+    <p>
+      Ruby enables using a method reference as method argument that can be used later(by using .call)
+    </p>
+
+    <pre>
+    <code class="language-ruby">
+    def execute_method method,text
+      method.call text
+    end
+
+    def display_text(txt)
+      puts txt
+    end
+
+    method_obj  = self.method("display_text")
+    execute_method(method_obj,"Hello from the start method!")
+    </code>
+  </pre>
+
+    <p>
+      In this example, we define a method called 'execute_method' that takes two named arguments: method and text. 'Method' argument will be the one to point to display_text method so it can be called dynamically.
+    </p>
+
+    <h2>Using Block as an method argument</h2>
+
+    <p>
+      Ruby enables using blocks as method arguments similar to method references(from above) but with a different syntax.
+    </p>
+
+    <pre>
+    <code class="language-ruby">
+    def use_block a = "Hey"
+      yield a
+      yield a
+    end
+
+    use_block{|s| puts 'where is the money? #{s} '}
+    </code>
+    </pre>
+
+    <p>
+      In this example, define block while we call 'use_block' method. And we call it twice by using special keyword 'yield'
+    </p>
+
+
+    <h2>Use Variable Arguments to Capture as Many Values as Necessary</h2>
+
+    <p>
+      Ruby enables using dynamic amount of arguments for all it's methods.
+    </p>
+
+
+    <pre>
+    <code class="language-ruby">
+    def print_all(*args)
+    end
+    print_all(1, 2, 3, 'sdf', 5,5)
+    </code>
+    </pre>
+
+    <h2>Use Hash Arguments to Capture as Many Values as Necessary</h2>
+
+    <p>
+      Ruby enables using hash as a dynamic list of arguments
+    </p>
+    <pre>
+    <code class="language-ruby">
+    def foo(regular, hash={})
+      puts "regular: #{regular}"
+      puts "hash: #{hash}"
+      puts "a: #{hash[:a]}"
+      puts "b: #{hash[:b]}"
+    end
+       foo("regular argument", a: 12, :b => 13)
+      </code>
+    </pre>
+
+
+    <h2> Double * (splat) operator for arguments </h2>
+
+    <p>
+      The double splat operator came out back in Ruby 2.0.
+      It’s pretty similar to the original splat with one difference:
+      it can be used for hashes! So you can random amount of key value arguments and ruby will read it as an argument
+    </p>
+    <pre>
+    <code class="language-ruby">
+        def foo(a, *b, **c)
+            [a, b, c]
+        end
+
+      foo(10, 20, 30, d: 40, e: 50) will result to: [10, [20, 30], {:d=>40, :e=>50}]
+       </code>
+    </pre>
+
+
     <h2>
       Conclusion
     </h2>
 
-    
 
     <p>
       In this article, we've explored how to use function arguments in Ruby. We've seen how to define arguments, use them in your code, specify default values, and use named arguments to make your code more readable and maintainable. By understanding how to use function arguments, you can write more powerful and flexible code in Ruby.
