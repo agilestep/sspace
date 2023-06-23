@@ -4,13 +4,13 @@
 <main class="blog">
   <div class="content">
     <p>In Ruby, function arguments give a good flexibility on how they can be used and
-      in this short article, we'll explore how to use function arguments in Ruby and show you some examples of how they can be used in practice.
+      in this short article I will show you how you can use them.
     </p>
 
     <h2>Defining and usage of Function Arguments</h2>
 
     <p>
-      To define function arguments in Ruby, you simply list them inside the parentheses after the method name. Here's an example of a method that takes two arguments:
+      To define function arguments in Ruby, you simply list them inside the parentheses(or without) after the method name. Here's an example of a method that takes two arguments:
     </p>
 
     <pre>
@@ -24,17 +24,15 @@
     def greeting name, age
       puts "Hello, #{name}! You are #{age} years old."
     end
-
       </code>
     </pre>
-
-    <p>In this example, we define a method called greeting that takes two arguments: name and age.</p>
 
     <h2>
       Default Values for Function Arguments
     </h2>
     <p>
-      In Ruby, you can specify default values for function arguments. If an argument is not passed to the method, the default value will be used instead. Here's an example of a method that takes an optional argument with a default value:
+      In Ruby, you can specify default values for function arguments. If an argument is not passed to the method, the default value will be used instead.
+      Here's an example of a method that takes an optional argument with a default value:
     </p>
 
     <pre>
@@ -48,13 +46,12 @@
       </code>
      </pre>
 
-    <p>
-      In this example, we define a method called greeting that takes two arguments: name and age. We set the default value of age to 30. If age is not passed as an argument, the default value will be used.
-    </p>
 
     <h2>Using Named Arguments in Ruby </h2>
     <p>
-      In Ruby 2.0 and later versions, you can use named arguments to make your code more readable and maintainable. Named arguments allow you to specify arguments by name instead of position. Here's an example of a method that uses named arguments:
+      In Ruby 2.0 and later versions, you can use named arguments to make your code more readable and maintainable.
+      Named arguments allow you to specify arguments by name instead of position.
+      Here's an example:
     </p>
 
 
@@ -69,11 +66,8 @@
     </code>
   </pre>
 
-    <p>
-      In this example, we define a method called greeting that takes two named arguments: name and age. We set the default value of age to 30. If age is not passed as an argument, the default value will be used.
-    </p>
 
-    <h2>Using method reference as an argument</h2>
+    <h2>Using method reference as an function argument</h2>
     <p>
       Ruby enables using a method reference as method argument that can be used later(by using .call)
     </p>
@@ -94,7 +88,8 @@
   </pre>
 
     <p>
-      In this example, we define a method called 'execute_method' that takes two named arguments: method and text. 'Method' argument will be the one to point to display_text method so it can be called dynamically.
+      In this example, we define a method called 'execute_method' that takes two named arguments: method and text.
+      And 'Method' argument will be the one to point to display_text method so it can be called dynamically.
     </p>
 
     <h2>Using Block as an method argument</h2>
@@ -115,7 +110,7 @@
     </pre>
 
     <p>
-      In this example, define block while we call 'use_block' method. And we call it twice by using special keyword 'yield'
+      In this example, define block while we call 'use_block' method. And we call it twice by using special keyword 'yield'.
     </p>
 
 
@@ -152,7 +147,7 @@
     </pre>
 
 
-    <h2> Double * (splat) operator for arguments </h2>
+    <h2> Double splat operator(**) for arguments </h2>
 
     <p>
       The double splat operator came out back in Ruby 2.0.
@@ -169,6 +164,10 @@
        </code>
     </pre>
 
+    <p>
+      In this example we define a method 'foo' it will get all 3 types of arguments: simple, splash for arrays and double splash for hashes.
+    </p>
+
 
     <h2>
       Conclusion
@@ -176,7 +175,8 @@
 
 
     <p>
-      In this article, we've explored how to use function arguments in Ruby. We've seen how to define arguments, use them in your code, specify default values, and use named arguments to make your code more readable and maintainable. By understanding how to use function arguments, you can write more powerful and flexible code in Ruby.
+      In this article, we've explored how to use function arguments in Ruby.
+      Cheers!
     </p>
   </div>
 </main>
