@@ -8,4 +8,7 @@ module ApplicationHelper
     tag.i(class:  "fa fa-star rating-color") * times
   end
 
+  def http_protocol
+     Rails.env == 'production' ? 'https' : 'http'
+  end
 end

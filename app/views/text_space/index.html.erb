@@ -79,7 +79,7 @@
 </table>
 </div>
 
-<%= form_for :cptext,url: text_space_create_url do |f| %>
+<%= form_for :cptext,url: text_space_create_url(:protocol => http_protocol) do |f| %>
   Content: <%= f.text_area :value,cols: "50", rows: "5"  %><br />
   <%= f.submit %>
 <% end %>
