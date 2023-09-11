@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'blogs/method_arguments'
   get 'blogs/regex'
   get 'home/index'
+  get 'text_space/index'
+  post 'text_space/create'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")

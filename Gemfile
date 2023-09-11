@@ -74,3 +74,5 @@ end
 gem "figaro"
 
 gem 'terser'
+
+gem 'nokogiri'
