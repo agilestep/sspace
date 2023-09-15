@@ -10,7 +10,9 @@
     </p>
 
     <p>
-      A block is a piece of code that can be passed to a method as an argument. It's a way to group together a set of statements that can be executed together. Blocks are defined using braces {} or the do...end keywords. Here's an example of a block that prints the elements of an array:
+      A block is a piece of code that can be passed to a method as an argument.
+      It's a way to group together a set of statements that can be executed together.
+      Blocks are defined using braces {} or the do...end keywords. Here's an example of a block that prints the elements of an array:
     </p>
 
     <pre>
@@ -23,12 +25,13 @@
     <p>In this example, the each method is passed a block that prints out each element of the array.</p>
     <h2> Procs in Ruby </h2>
     <p>
-      A proc is an object that encapsulates a block of code. It can be stored in a variable, passed as an argument to a method, or returned from a method. Here's an example of a proc that doubles a number:
+      A proc is an object that encapsulates a block of code.
+      It can be stored in a variable, passed as an argument to a method, or returned from a method.
+      Here's an example of a proc that doubles a number:
     </p>
 
     <pre>
       <code class="language-ruby">
-
         doubler = Proc.new { |n| n * 2 }
         result = doubler.call(5)
         puts result # Output: 10
@@ -40,7 +43,9 @@
 
     <h2>Lambdas in Ruby</h2>
     <p>
-      A lambda is a type of proc that enforces strict argument checking. Unlike a regular proc, a lambda will raise an error if the wrong number of arguments is passed to it. Here's an example of a lambda that doubles a number:
+      A lambda is a type of proc that enforces strict argument checking. Unlike a regular proc,
+      a lambda will raise an error if the wrong number of arguments is passed to it.
+      Here's an example of a lambda that doubles a number:
     </p>
 
     <pre>
@@ -58,9 +63,10 @@
     <h2>Differences Between Procs and Lambdas</h2>
 
     <p>
-      The main difference between procs and lambdas is how they handle argument checking. A proc will simply ignore any extra arguments that are passed to it, while a lambda will raise an error. Here's an example that demonstrates this difference:
+      The main difference between procs and lambdas is how they handle argument checking.
+      A proc will simply ignore any extra arguments that are passed to it, while a lambda will raise an error.
+      Here's an example that demonstrates this difference:
     </p>
-
 
     <pre>
       <code class="language-ruby">
@@ -83,7 +89,11 @@
     </h2>
 
     <p>
-      In this article, we've explored the concepts of blocks, procs, and lambdas in Ruby. Blocks are a way to group together a set of statements that can be executed together, procs are objects that encapsulate a block of code, and lambdas are a type of proc that enforces strict argument checking. By understanding these concepts, you can write more elegant and efficient code in Ruby.
+      In this article, we've explored the concepts of blocks, procs, and lambdas in Ruby.
+      Blocks are a way to group together a set of statements that can be executed together,
+      procs are objects that encapsulate a block of code,
+      and lambdas are a type of proc that enforces strict argument checking.
+      By understanding these concepts, you can write more elegant and efficient code in Ruby.
     </p>
   </div>
 </main>
