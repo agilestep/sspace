@@ -113,7 +113,6 @@
       In this example, define block while we call 'use_block' method. And we call it twice by using special keyword 'yield'.
     </p>
 
-
     <h2>Use Variable Arguments to Capture as Many Values as Necessary</h2>
 
     <p>
@@ -124,7 +123,9 @@
     <pre>
     <code class="language-ruby">
     def print_all(*args)
+    #...
     end
+
     print_all(1, 2, 3, 'sdf', 5,5)
     </code>
     </pre>
@@ -142,8 +143,10 @@
       puts "a: #{hash[:a]}"
       puts "b: #{hash[:b]}"
     end
-       foo("regular argument", a: 12, :b => 13)
-      </code>
+
+    foo("regular argument", a: 12, :b => 13)
+
+     </code>
     </pre>
 
 
@@ -168,15 +171,5 @@
       In this example we define a method 'foo' it will get all 3 types of arguments: simple, splash for arrays and double splash for hashes.
     </p>
 
-
-    <h2>
-      Conclusion
-    </h2>
-
-
-    <p>
-      In this article, we've explored how to use function arguments in Ruby.
-      Cheers!
-    </p>
   </div>
 </main>
